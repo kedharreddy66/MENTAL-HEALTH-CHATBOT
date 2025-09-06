@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MH Chatbot</title>
+  <style>
+  body { font-family: sans-serif; display: flex; flex-direction: column; height: 100vh; margin: 0; }
+  header { background: #008080; color: white; padding: 1rem; text-align: center; font-size: 1.5rem; }
+  #messages { flex: 1; padding: 1rem; overflow-y: auto; background: #f5f5f5; }
+  .bot { background: #d1f0ef; margin: 0.2rem 0; padding: 0.5rem 1rem; border-radius: 10px; max-width: 70%; white-space: pre-wrap; }
+  .user { background: #008080; color: white; margin: 0.2rem 0 0.2rem auto; padding: 0.5rem 1rem; border-radius: 10px; max-width: 70%; white-space: pre-wrap; }
+  form { display: flex; padding: 0.5rem; background: #eee; }
+  input { flex: 1; padding: 0.5rem; }
+  button { padding: 0.5rem 1rem; background: #008080; color: white; border: none; }
+</style>
+</head>
+<body>
+  <header>Bot</header>
+  <div id="messages"></div>
+  <form id="chat-form">
+    <input type="text" id="message" placeholder="Type here..." autofocus />
+    <button type="submit">Send</button>
+  </form>
+
+  <script>
+    const API_URL = "http://127.0.0.1:8000/chat";
+    let state = null;
+    const messagesDiv = document.getElementById("messages");
+    const form = document.getElementById("chat-form");
+    const input = document.getElementById("message");
+
+    function appendMessage(text, role) {
+      const div = document.createElement("div");
+      div.className = role;
+      div.textContent = text;
+      messagesDiv.appendChild(div);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    async function sendMessage(text) {
+      const payload = { message: text, state: state };
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      state = data.state;
+      if (data.tool === "route_to_support") {
+        appendMessage("🚨 Crisis detected — app should show support screen.", "bot");
+      }
+      if (data.reply) appendMessage(data.reply, "bot");
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+      appendMessage(text, "user");
+      input.value = "";
+      await sendMessage(text);
+    });
+
+    // Kick off with empty message to get welcome prompt
+    sendMessage("");
+  </script>
+  <script>
+if (window.location.search.includes("utm_source")) {
+  window.history.replaceState({}, document.title, window.location.pathname);
+}
+</script>
+
+</body>
+</html>

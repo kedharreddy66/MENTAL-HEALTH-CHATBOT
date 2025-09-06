@@ -1,0 +1,20 @@
+{
+  "strings": {
+    "welcome": "Welcome — let's yarn about what keeps you strong. I won’t ask for personal details here.",
+    "strengths_prompt": "Who or what helps you stay strong? Family, Country, culture, music, sport…",
+    "worries_prompt": "Any worries on your mind today? You can list a few. Type ‘next’ when done.",
+    "goal_prompt": "Let’s pick one small, doable goal for this week.",
+    "support_prompt": "Who can back you up with this goal (friend, family, Elder, service)?",
+    "next_step_prompt": "What’s one tiny thing you can try before tomorrow?",
+    "wrap_prompt": "Deadly work! Your plan is ready — would you like to save it?",
+    "clarify_strengths": "By strengths, I mean people, places, culture and habits that help you feel okay or keep going."
+  },
+  "examples": {
+    "small_goals": [
+      "10-minute walk after breakfast",
+      "Phone a cousin for a yarn",
+      "Tidy a small corner of the room",
+      "Make a cuppa and do 4-2-6 breathing"
+    ]
+  }
+}
