@@ -115,4 +115,4 @@ This chatbot draws on the AIMhi Stay Strong framework developed by the Menzies S
 ---
 
 ## 📄 License
-Specify your project’s licence here (e.g., MIT). If you plan to release or commercialise this chatbot, ensure appropriate permissions and licensing agreements with the Menzies School of Health Research for use of Stay Strong materials.
+This project is currently unlicensed. Please contact the repository owner for licensing information
