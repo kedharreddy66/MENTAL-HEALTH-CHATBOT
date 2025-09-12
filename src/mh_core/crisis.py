@@ -1,15 +1,20 @@
 """
-Development crisis stub:
-- contains_crisis_signal() always returns False when DEV_BYPASS_CRISIS=true
-- SUPPORT_TEXT is empty (no helplines shown)
-Re-enable real detection later by unsetting DEV_BYPASS_CRISIS.
+Crisis detection and support helpers.
+
+Behaviour:
+- If DEV_BYPASS_CRISIS=true, detection is disabled and functions no-op.
+- Otherwise uses regex patterns to detect crisis terms and can format
+  helpline numbers from content/crisis_contacts_au.json.
 """
 import os
 import re
 import sys
+import json
 from datetime import datetime
+from pathlib import Path
 
-_DEV_BYPASS = os.getenv("DEV_BYPASS_CRISIS", "true").lower() in ("1", "true", "yes")
+# Default to enabled in production; can opt-out via env
+_DEV_BYPASS = os.getenv("DEV_BYPASS_CRISIS", "false").lower() in ("1", "true", "yes")
 
 _CRISIS_TERMS = [
     r"\bsuicide\b", r"\bsuicidal\b", r"\bend it\b", r"\bend my life\b",
@@ -33,4 +38,49 @@ def contains_crisis_signal(text: str) -> bool:
         return True
     return False
 
-SUPPORT_TEXT = ""  # no helplines in dev mode
+def support_lines() -> list[str]:
+    """Return helpline lines for display. Empty if bypassing or file missing."""
+    if _DEV_BYPASS:
+        return []
+    try:
+        root = Path(__file__).resolve().parents[2]
+        path = root / "content" / "crisis_contacts_au.json"
+        if not path.exists():
+            return []
+        data = json.loads(path.read_text(encoding="utf-8"))
+        # Keep a friendly, short list
+        mapping = {
+            "Emergency": data.get("emergency"),
+            "Lifeline": data.get("lifeline"),
+            "Kids Helpline": data.get("kids_helpline"),
+            "Suicide Call Back": data.get("suicide_callback"),
+            "Beyond Blue": data.get("beyond_blue"),
+        }
+        lines = []
+        for label, num in mapping.items():
+            if num:
+                lines.append(f"- {label}: {num}")
+        return lines
+    except Exception:
+        return []
+
+def looks_okay_response(text: str) -> bool:
+    """Heuristic to detect if user indicates they are okay/safe and not seeking help now."""
+    if not text:
+        return False
+    low = text.strip().lower()
+    positive = [
+        "i'm okay", "im okay", "i am okay", "i'm ok", "im ok", "i am ok",
+        "i'm fine", "im fine", "fine", "okay", "ok", "all good", "allgood",
+        "better now", "feeling better", "sorted", "no worries", "no worry",
+        "safe now", "i'm safe", "im safe", "i am safe",
+        "not now", "not really", "no thanks", "no thank you", "nah", "no",
+    ]
+    negatives = [
+        "not safe", "can't stay safe", "cant stay safe", "hurt myself", "suicide", "end it",
+        "want to die", "want to end it", "kill myself", "kill me",
+    ]
+    # If positive signals present and no strong negatives, treat as okay
+    if any(p in low for p in positive) and not any(n in low for n in negatives):
+        return True
+    return False

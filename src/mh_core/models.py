@@ -12,6 +12,8 @@ class ChatState(BaseModel):
     goal: str = ""
     support: str = ""
     nextStep: str = ""
+    # Crisis flow state: none | check | done
+    crisis: str = Field(default="none")
 
 class ChatIn(BaseModel):
     """
@@ -33,3 +35,6 @@ class ChatOut(BaseModel):
     reply: Optional[str] = None
     state: Optional[ChatState] = None
     tool: Optional[str] = None
+    # Optional richer payloads (used by chat.html for crisis flow)
+    mode: Optional[str] = None
+    messages: Optional[List[str]] = None

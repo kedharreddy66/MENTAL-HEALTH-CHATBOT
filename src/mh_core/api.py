@@ -2,7 +2,7 @@
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from .models import ChatIn, ChatOut, ChatState
-from .crisis import contains_crisis_signal  # SUPPORT_TEXT intentionally unused in dev
+from .crisis import contains_crisis_signal, support_lines, looks_okay_response
 from .ai_gateway import call_ollama_chat, SYSTEM_PROMPT
 from .rag import retrieve_context
 from .culture import normalize_for_retrieval
@@ -44,10 +44,37 @@ def chat(body: ChatIn):
     if not user:
         return ChatOut(reply=None, state=state)
 
-    # Crisis: in dev, do nothing special (bypass)
+    # Crisis flow
+    if state.crisis == "check":
+        if looks_okay_response(user):
+            state.crisis = "done"
+            return ChatOut(
+                reply="Thanks for letting me know. I'm here if you want to talk more.",
+                state=state,
+            )
+        # Show helplines
+        lines = support_lines()
+        state.crisis = "done"
+        msgs = [
+            "I am really glad you told me; getting support matters.",
+        ]
+        if lines:
+            msgs.append("If you want to talk to someone now, here are some options:")
+            msgs.extend(lines)
+        else:
+            msgs.append("If you want to talk to someone now, please reach out to a local helpline or emergency services.")
+        return ChatOut(mode="crisis", messages=msgs, state=state)
+
     if contains_crisis_signal(user):
-        # In dev bypass, this won't trigger. Left here for future re-enable.
-        return ChatOut(reply=None, state=state)
+        # Ask permission to talk about it; do not show numbers yet
+        state.crisis = "check"
+        return ChatOut(
+            mode="crisis",
+            messages=[
+                "Would you like to talk about that? I can share some support options if you want.",
+            ],
+            state=state,
+        )
 
     # Optional local style guide (appended to system prompt if present)
     style_append = ""
@@ -86,7 +113,7 @@ def chat(body: ChatIn):
     max_toks = 60 if fast_mode else 90
     reply = call_ollama_chat(messages, temperature=0.25 if fast_mode else 0.3, top_p=0.9, max_tokens=max_toks)
 
-    # Filter accidental phone numbers in normal chat (kept for dev)
+    # Filter accidental phone numbers in normal chat (not applied in crisis mode)
     low = (reply or "").lower()
     if any(w in low for w in [" call ", " phone ", "000", "1800", "13 "]):
         reply = "Here are a couple of ideas that might help right now."
