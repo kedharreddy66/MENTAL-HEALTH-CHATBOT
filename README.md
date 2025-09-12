@@ -27,12 +27,27 @@ A culturally safe, web‑based chatbot designed to deliver the four‑step Stay 
 ```
 MENTAL-HEALTH-CHATBOT/
 ├── chat.html          # Single-page front‑end interface
-├── src/               # Python source code (FastAPI app, conversation logic, crisis module)
-│   └── mh_core/       # Package containing core modules
-├── scripts/           # Utility scripts (e.g., build index, CLI chat)
-├── content/           # Knowledge base documents and embeddings
-├── tests/             # Unit tests for API, crisis detection, and chat flow
-├── requirements.txt   # Python dependencies
+├── src/
+│   └── mh_core/       # Core backend package (FastAPI + helpers)
+│       ├── api.py                 # FastAPI endpoints (/health, /reset, /chat)
+│       ├── ai_gateway.py          # Ollama chat gateway + system prompt
+│       ├── rag.py                 # Retrieval (Ollama embeddings + local index)
+│       ├── models.py              # Pydantic request/response models
+│       ├── crisis.py              # Crisis keyword signal detection
+│       ├── culture.py             # Normalisation + lexicon support
+│       ├── safety.py              # Output safety filters (non‑crisis)
+│       ├── audit.py               # Simple trace/audit helpers
+│       ├── flow.py                # Conversation step helpers (optional)
+│       └── content_loader.py      # Utilities for loading content (optional)
+├── scripts/
+│   ├── build_index.py             # Build vector index used by rag.py
+│   ├── chat_cli.py                # Simple terminal client (optional)
+│   ├── extract_pdf_text.py        # Utilities for preparing content (optional)
+│   └── build_tuning_dataset.py    # Create instruction‑tuning dataset (optional)
+├── content/           # Knowledge base, style guide, indices
+├── tuning/            # Tuning dataset(s) for experimentation
+├── tests/             # Unit tests for API, crisis detection, flow
+├── .gitignore         # Excludes venvs, caches, build artifacts
 └── README.md          # Project overview (this file)
 ```
 
@@ -62,8 +77,11 @@ MENTAL-HEALTH-CHATBOT/
    venv\Scripts\activate      # Windows
    ```
 3. **Install dependencies:**
+   This repo does not currently include a `requirements.txt`. Install the minimal runtime deps:
    ```bash
-   pip install -r requirements.txt
+   pip install fastapi uvicorn pydantic numpy
+   # Optional (for scripts): pdfminer.six
+   # If using lint/tests locally: pytest ruff mypy
    ```
 4. **Build the embeddings index (if needed):**
    ```bash
@@ -84,6 +102,22 @@ The API will start at http://localhost:8000.
 - Start a conversation by typing into the chat box on `chat.html`. The bot guides you through the four Stay Strong steps.
 - If distressing keywords (e.g., “suicide,” “hurt myself,” “not safe”) are detected, the chat flow pauses and a helpline panel is displayed.
 - When the conversation ends, the bot generates a summary plan of strengths, worries, goals, and actions.
+
+---
+
+## 🔧 Configuration
+
+- Ollama settings (local LLM):
+  - `OLLAMA_HOST` (default `127.0.0.1`)
+  - `OLLAMA_PORT` (default `11434`)
+  - `OLLAMA_MODEL` (default `llama3.2:3b-instruct-q4_K_M`)
+  - `OLLAMA_NUM_THREADS` (optional, integer)
+- App behaviour toggles:
+  - `PLAIN_ENGLISH_MODE` = `true|false` (default `true`)
+  - `FAST_MODE` = `true|false` (default `true` – skip retrieval for speed)
+- Local style guide: add `content/style_guide_local.json` with an `{"append": "..."}` field to append guidance to the system prompt.
+
+Tip (Windows): if running Ollama elsewhere, set `OLLAMA_HOST` to that machine’s IP and keep port open.
 
 ---
 
@@ -115,4 +149,14 @@ This chatbot draws on the AIMhi Stay Strong framework developed by the Menzies S
 ---
 
 ## 📄 License
-This project is currently unlicensed. Please contact the repository owner for licensing information
+This project is currently unlicensed. Please contact the repository owner for licensing information.
+
+---
+
+## 🧹 Housekeeping (.gitignore)
+- Virtual environments (`.venv/`, `venv/`, `conda-env/`) and Python caches (`__pycache__/`, `*.pyc`) are ignored.
+- If you previously committed environment files, run:
+  ```bash
+  git rm -r --cached .venv conda-env **/__pycache__
+  git commit -m "Clean tracked env/cache files"
+  ```
