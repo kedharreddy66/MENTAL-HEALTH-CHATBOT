@@ -2,6 +2,7 @@
 .venv/
 venv/
 env/
+conda-env/
 
 # Python cache and artifacts
 __pycache__/
