@@ -51,6 +51,8 @@ def support_lines() -> list[str]:
         # Keep a friendly, short list
         mapping = {
             "Emergency": data.get("emergency"),
+            "Emergency (mobile)": data.get("emergency_mobile"),
+            "13YARN": data.get("13yarn"),
             "Lifeline": data.get("lifeline"),
             "Kids Helpline": data.get("kids_helpline"),
             "Suicide Call Back": data.get("suicide_callback"),
@@ -71,14 +73,20 @@ def looks_okay_response(text: str) -> bool:
     low = text.strip().lower()
     positive = [
         "i'm okay", "im okay", "i am okay", "i'm ok", "im ok", "i am ok",
-        "i'm fine", "im fine", "fine", "okay", "ok", "all good", "allgood",
-        "better now", "feeling better", "sorted", "no worries", "no worry",
+        "i'm fine", "im fine", "fine", "okay", "ok",
+        "all good", "allgood", "doing good", "good now", "feeling good",
+        "better now", "feeling better", "bit better", "im better", "i'm better",
+        "sorted", "no worries", "no worry", "no wori",
         "safe now", "i'm safe", "im safe", "i am safe",
         "not now", "not really", "no thanks", "no thank you", "nah", "no",
+        "maybe later", "later", "another time", "not needed", "no need",
     ]
     negatives = [
-        "not safe", "can't stay safe", "cant stay safe", "hurt myself", "suicide", "end it",
+        "not safe", "unsafe", "can't stay safe", "cant stay safe",
+        "still struggling", "struggling", "worse", "really bad", "not okay", "not ok",
+        "hurt myself", "self-harm", "suicide", "end it", "end my life",
         "want to die", "want to end it", "kill myself", "kill me",
+        "need help", "please help",
     ]
     # If positive signals present and no strong negatives, treat as okay
     if any(p in low for p in positive) and not any(n in low for n in negatives):

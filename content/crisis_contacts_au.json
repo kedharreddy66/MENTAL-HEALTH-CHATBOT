@@ -1,5 +1,7 @@
 {
   "emergency": "000",
+  "emergency_mobile": "112",
+  "13yarn": "13 92 76",
   "lifeline": "13 11 14",
   "kids_helpline": "1800 551 800",
   "suicide_callback": "1300 659 467",
