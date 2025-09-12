@@ -1,4 +1,5 @@
 import json, http.client, os
+from functools import lru_cache
 import numpy as np
 from pathlib import Path
 
@@ -9,9 +10,10 @@ META = Path("content/index_meta.json")
 _vectors = None
 _meta = None
 
+@lru_cache(maxsize=256)
 def _embed_one(text: str):
     """Embed a single text with Ollama. Handles 'embedding' and 'embeddings' keys."""
-    conn = http.client.HTTPConnection("127.0.0.1", 11434, timeout=30)
+    conn = http.client.HTTPConnection("127.0.0.1", 11434, timeout=15)
     payload = {"model": EMBED_MODEL, "input": text}
     conn.request("POST", "/api/embeddings", body=json.dumps(payload), headers={"Content-Type":"application/json"})
     resp = conn.getresponse()
@@ -36,7 +38,10 @@ def _load_index():
         _vectors = np.load(VECS)
         _meta = json.loads(META.read_text(encoding="utf-8"))
 
-def retrieve_context(user_text: str, k: int = 2) -> str:
+def retrieve_context(user_text: str, k: int = 1) -> str:
+    # For very short inputs, skip retrieval to reduce latency
+    if not user_text or len(user_text.strip()) < 12:
+        return ""
     _load_index()
     q = _embed_one(user_text)
     sims = (_vectors @ q).tolist()

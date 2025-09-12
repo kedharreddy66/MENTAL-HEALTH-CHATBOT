@@ -1,10 +1,13 @@
-from fastapi import FastAPI
+﻿from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from .models import ChatIn, ChatOut, ChatState
 from .crisis import contains_crisis_signal  # SUPPORT_TEXT intentionally unused in dev
 from .ai_gateway import call_ollama_chat, SYSTEM_PROMPT
 from .rag import retrieve_context
+from .culture import normalize_for_retrieval
+from pathlib import Path
+import json as _json
 
 app = FastAPI(title="MH Chatbot (Free-form, Small Model)")
 
@@ -19,6 +22,13 @@ app.add_middleware(
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+
+@app.post("/reset")
+def reset():
+    """Resets the chat state for a new conversation."""
+    fresh = ChatState()
+    return JSONResponse({"state": fresh.model_dump()})
 
 @app.post("/chat", response_model=ChatOut)
 def chat(body: ChatIn):
@@ -39,15 +49,42 @@ def chat(body: ChatIn):
         # In dev bypass, this won't trigger. Left here for future re-enable.
         return ChatOut(reply=None, state=state)
 
+    # Optional local style guide (appended to system prompt if present)
+    style_append = ""
+    try:
+        sg_path = Path(__file__).resolve().parents[2] / "content" / "style_guide_local.json"
+        if sg_path.exists():
+            sg = _json.loads(sg_path.read_text(encoding="utf-8"))
+            style_append = (sg.get("append") or "").strip()
+    except Exception:
+        style_append = ""
+
+    # Mode toggles (env)
+    import os as _os
+    plain_mode = (_os.getenv("PLAIN_ENGLISH_MODE", "true").lower() in ("1", "true", "yes"))
+    fast_mode = (_os.getenv("FAST_MODE", "true").lower() in ("1", "true", "yes"))
+    if body.fast is not None:
+        fast_mode = bool(body.fast)
+
+    # Lexicon: help the model interpret Aboriginal English while replying in plain English
+    norm_user, lex_notes = normalize_for_retrieval(user)
+
     # RAG context (approved snippets)
-    context = retrieve_context(user)
-    system = SYSTEM_PROMPT + (("\n\nAPPROVED CONTEXT:\n" + context) if context else "")
+    context = "" if fast_mode else retrieve_context(norm_user)
+    system = SYSTEM_PROMPT
+    if style_append and plain_mode:
+        system += "\n\nLOCAL STYLE GUIDE:\n" + style_append
+    if lex_notes:
+        system += "\n\nLEXICON NOTES (user terms):\n- " + "\n- ".join(lex_notes)
+    if context:
+        system += "\n\nAPPROVED CONTEXT:\n" + context
     messages = [
         {"role": "system", "content": system},
         {"role": "user", "content": user},
     ]
 
-    reply = call_ollama_chat(messages, temperature=0.3, top_p=0.9, max_tokens=120)
+    max_toks = 60 if fast_mode else 90
+    reply = call_ollama_chat(messages, temperature=0.25 if fast_mode else 0.3, top_p=0.9, max_tokens=max_toks)
 
     # Filter accidental phone numbers in normal chat (kept for dev)
     low = (reply or "").lower()
@@ -70,3 +107,4 @@ def debug_model():
         return JSONResponse({"configured": OLLAMA_MODEL, "available": available, "tags": tags})
     except Exception as e:
         return JSONResponse({"configured": OLLAMA_MODEL, "available": False, "error": str(e)}, status_code=503)
+

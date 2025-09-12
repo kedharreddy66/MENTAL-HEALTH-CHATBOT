@@ -21,6 +21,7 @@ class ChatIn(BaseModel):
     """
     message: str
     state: Optional[ChatState] = None
+    fast: Optional[bool] = None  # optional client hint to enable fast mode per-request
 
 class ChatOut(BaseModel):
     """

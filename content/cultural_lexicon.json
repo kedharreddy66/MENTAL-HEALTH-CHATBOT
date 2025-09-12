@@ -1,0 +1,22 @@
+{
+  "terms": [
+    {"phrase": "yarn", "meaning": "talk or have a conversation"},
+    {"phrase": "yarning", "meaning": "talking or having a conversation"},
+    {"phrase": "deadly", "meaning": "excellent or very good"},
+    {"phrase": "mob", "meaning": "community or extended family group"},
+    {"phrase": "Country", "meaning": "Aboriginal connection to land, waters, sky and place"},
+    {"phrase": "sorry business", "meaning": "grief, mourning, funerals and related cultural practices"},
+    {"phrase": "grog", "meaning": "alcohol"},
+    {"phrase": "ciggies", "meaning": "cigarettes"},
+    {"phrase": "gunja", "meaning": "cannabis"},
+    {"phrase": "ganja", "meaning": "cannabis"},
+    {"phrase": "humbug", "meaning": "pressure, unwanted demands, or harassment"},
+    {"phrase": "big smoke", "meaning": "big city or urban area"},
+    {"phrase": "no shame", "meaning": "do not be embarrassed; it is okay"},
+    {"phrase": "shame job", "meaning": "embarrassing situation"},
+    {"phrase": "yarn up", "meaning": "talk further or in more detail"},
+    {"phrase": "Aunty", "meaning": "respected older woman (title of respect)"},
+    {"phrase": "Uncle", "meaning": "respected older man (title of respect)"}
+  ]
+}
+

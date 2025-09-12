@@ -2,73 +2,210 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MH Chatbot</title>
   <style>
-  body { font-family: sans-serif; display: flex; flex-direction: column; height: 100vh; margin: 0; }
-  header { background: #008080; color: white; padding: 1rem; text-align: center; font-size: 1.5rem; }
-  #messages { flex: 1; padding: 1rem; overflow-y: auto; background: #f5f5f5; }
-  .bot { background: #d1f0ef; margin: 0.2rem 0; padding: 0.5rem 1rem; border-radius: 10px; max-width: 70%; white-space: pre-wrap; }
-  .user { background: #008080; color: white; margin: 0.2rem 0 0.2rem auto; padding: 0.5rem 1rem; border-radius: 10px; max-width: 70%; white-space: pre-wrap; }
-  form { display: flex; padding: 0.5rem; background: #eee; }
-  input { flex: 1; padding: 0.5rem; }
-  button { padding: 0.5rem 1rem; background: #008080; color: white; border: none; }
-</style>
+    :root{
+      --bg:#f5f7fb; --panel:#ffffff; --teal:#007a7a;
+      --bot:#e9ecf1; --me:#0b93f6; --me-text:#fff; --muted:#6b7280;
+      --shadow:0 8px 24px rgba(0,0,0,.08); --radius:18px; --radius-big:22px;
+      --maxw:860px;
+    }
+    *{box-sizing:border-box}
+    body{ margin:0; background:var(--bg);
+      font:16px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:#111827;}
+    .app{ max-width:var(--maxw); margin:0 auto; min-height:100dvh;
+      display:flex; flex-direction:column; padding-top:12px; }
+    .header{
+      position:sticky; top:12px; margin:0 16px; background:var(--teal);
+      border-radius:14px; color:#fff; padding:12px 14px; z-index:2; box-shadow:0 2px 8px rgba(0,0,0,.1);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .header h1{ margin:0; font-size:18px; font-weight:700; letter-spacing:.2px; }
+    .header-actions{
+      position:absolute; right:24px; display:flex; gap:8px;
+    }
+    .btn{
+      height:34px; padding:0 12px; border-radius:10px; border:none; cursor:pointer; font-weight:600;
+      box-shadow:0 2px 8px rgba(0,0,0,.12);
+    }
+    .btn-primary{ background:#0a7f7f; color:#fff; }
+    .btn-ghost{ background:rgba(255,255,255,.15); color:#fff; border:1px solid rgba(255,255,255,.35); }
+    .btn:disabled{ opacity:.6; cursor:not-allowed; }
+
+    .panel{ background:var(--panel); margin:16px; border-radius:20px; box-shadow:var(--shadow);
+      display:flex; flex-direction:column; min-height:60vh; overflow:hidden; }
+    .messages{ padding:18px 16px 12px; overflow:auto; display:flex; flex-direction:column;
+      gap:10px; scrollbar-gutter:stable both-edges; }
+    .row{ display:flex; width:100%; }
+    .row.me{ justify-content:flex-end; }
+    .row.bot{ justify-content:flex-start; }
+    .bubble{ max-width:72%; padding:10px 12px; border-radius:var(--radius);
+      position:relative; word-wrap:break-word; white-space:pre-wrap; box-shadow:0 2px 6px rgba(0,0,0,.05); }
+    .row.me .bubble{ background:var(--me); color:var(--me-text);
+      border-top-right-radius:var(--radius-big); border-bottom-right-radius:6px; }
+    .row.bot .bubble{ background:var(--bot); color:#111827;
+      border-top-left-radius:var(--radius-big); border-bottom-left-radius:6px; }
+    .meta{ font-size:12px; color:var(--muted); margin-top:4px; user-select:none; }
+    .row.me .meta{ text-align:right; opacity:.9; color:#e6f2ff; }
+    .row.bot .meta{ text-align:left; }
+
+    .composer{ border-top:1px solid #e5e7eb; padding:12px; display:flex; gap:10px; align-items:flex-end;
+      background:#f9fafb; }
+    textarea{ flex:1; resize:none; min-height:44px; max-height:160px; border:1.5px solid #d1d5db;
+      border-radius:12px; padding:10px 12px; background:#fff; outline:none; font:inherit;
+      box-shadow:inset 0 1px 2px rgba(0,0,0,.04); transition:border .2s ease; }
+    textarea:focus{ border-color:var(--teal); box-shadow:0 0 0 3px rgba(0,122,122,.15); }
+    .send-btn{ height:44px; padding:0 18px; border:none; border-radius:12px; background:var(--teal); color:#fff;
+      font-weight:600; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.12); }
+    .send-btn:disabled{ opacity:.6; cursor:not-allowed; }
+
+    .typing{ display:inline-flex; gap:6px; align-items:center; }
+    .typing .dot{ width:6px; height:6px; border-radius:50%; background:#9aa1ac; animation:blink 1.2s infinite; }
+    .typing .dot:nth-child(2){ animation-delay:.15s; } .typing .dot:nth-child(3){ animation-delay:.3s; }
+    @keyframes blink{ 0%,80%,100%{ opacity:.25; transform:translateY(0);} 40%{ opacity:1; transform:translateY(-2px);} }
+
+    @media (max-width:600px){
+      .bubble{ max-width:85%; }
+      .panel{ margin:12px; }
+      .header{ margin:0 12px; }
+      .header-actions{ right:12px; }
+    }
+  </style>
 </head>
 <body>
-  <header>Bot</header>
-  <div id="messages"></div>
-  <form id="chat-form">
-    <input type="text" id="message" placeholder="Type here..." autofocus />
-    <button type="submit">Send</button>
-  </form>
+  <div class="app">
+    <div class="header">
+      <h1>Bot</h1>
+      <div class="header-actions">
+        <button id="fast" class="btn btn-ghost" title="Toggle fast mode">Fast: On</button>
+        <button id="reset" class="btn btn-ghost" title="Start a new chat">Reset</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div id="messages" class="messages" aria-live="polite"></div>
+
+      <div class="composer">
+        <textarea id="input"></textarea>
+        <button id="send" class="send-btn">Send</button>
+      </div>
+    </div>
+  </div>
 
   <script>
     const API_URL = "http://127.0.0.1:8000/chat";
-    let state = null;
-    const messagesDiv = document.getElementById("messages");
-    const form = document.getElementById("chat-form");
-    const input = document.getElementById("message");
+    const RESET_URL = "http://127.0.0.1:8000/reset";
 
-    function appendMessage(text, role) {
-      const div = document.createElement("div");
-      div.className = role;
-      div.textContent = text;
-      messagesDiv.appendChild(div);
-      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    const messagesEl = document.getElementById('messages');
+    const inputEl = document.getElementById('input');
+    const sendBtn = document.getElementById('send');
+    const resetBtn = document.getElementById('reset');
+    const fastBtn = document.getElementById('fast');
+
+    let STATE = {}; // persists Stay Strong step across turns
+    let FAST_MODE = true; // default matches server default
+
+    function nowStamp(d=new Date()){ return d.toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}); }
+    function addMessage(role, text, stamp=nowStamp()){
+      const row = document.createElement('div'); row.className = `row ${role}`;
+      const bubble = document.createElement('div'); bubble.className = 'bubble'; bubble.textContent = text;
+      const meta = document.createElement('div'); meta.className = 'meta'; meta.textContent = stamp;
+      bubble.appendChild(document.createElement('br')); bubble.appendChild(meta);
+      row.appendChild(bubble); messagesEl.appendChild(row); scrollBottom(); return row;
     }
+    function scrollBottom(){ messagesEl.scrollTo({ top: messagesEl.scrollHeight, behavior: 'smooth' }); }
 
-    async function sendMessage(text) {
-      const payload = { message: text, state: state };
-      const res = await fetch(API_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      const data = await res.json();
-      state = data.state;
-      if (data.tool === "route_to_support") {
-        appendMessage("🚨 Crisis detected — app should show support screen.", "bot");
+    function showTyping(){
+      const row = document.createElement('div'); row.className = 'row bot'; row.dataset.typing = 'true';
+      const bubble = document.createElement('div'); bubble.className = 'bubble';
+      bubble.innerHTML = `<span class="typing" aria-label="Bot is typing">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span></span>`;
+      const meta = document.createElement('div'); meta.className = 'meta'; meta.textContent = 'typing…';
+      bubble.appendChild(document.createElement('br')); bubble.appendChild(meta); row.appendChild(bubble);
+      messagesEl.appendChild(row); scrollBottom(); return row;
+    }
+    function hideTyping(row){ if(row && row.parentNode){ row.parentNode.removeChild(row); } }
+
+    async function send(){
+      const text = inputEl.value.trim(); if(!text) return;
+      inputEl.value = ''; inputEl.style.height = '44px'; addMessage('me', text);
+      sendBtn.disabled = true; inputEl.disabled = true; resetBtn.disabled = true;
+      const typingRow = showTyping(); const started = performance.now();
+
+      try{
+        const resp = await fetch(API_URL, {
+          method:'POST', headers:{ 'Content-Type':'application/json' },
+          body: JSON.stringify({ message: text, state: STATE, fast: FAST_MODE })
+        });
+        if(!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const data = await resp.json();
+
+        if (data && data.state) STATE = data.state;
+
+        const elapsed = performance.now() - started;
+        if (elapsed < 120) await new Promise(r => setTimeout(r, 120 - elapsed));
+
+        hideTyping(typingRow);
+
+        if (data && data.mode === "crisis" && Array.isArray(data.messages)) {
+          data.messages.forEach(chunk => addMessage('bot', chunk));
+          return;
+        }
+        const botText = data && (data.reply || data.text) ? (data.reply || data.text) : "…";
+        addMessage('bot', botText);
+      }catch(err){
+        console.error("Send error:", err);
+        hideTyping(typingRow);
+        addMessage('bot', "Sorry, I couldn't reach the server. Make sure the API is running and CORS is enabled.");
+      }finally{
+        sendBtn.disabled = false; inputEl.disabled = false; resetBtn.disabled = false; inputEl.focus();
       }
-      if (data.reply) appendMessage(data.reply, "bot");
     }
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const text = input.value.trim();
-      if (!text) return;
-      appendMessage(text, "user");
-      input.value = "";
-      await sendMessage(text);
+    async function resetChat(){
+      try{
+        resetBtn.disabled = true; sendBtn.disabled = true; inputEl.disabled = true;
+        const resp = await fetch(RESET_URL, { method:'POST' });
+        if(!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const data = await resp.json();
+        STATE = (data && data.state) ? data.state : {};
+        // Clear UI
+        messagesEl.innerHTML = "";
+        inputEl.value = "";
+        inputEl.style.height = '44px';
+        // Optional: Add a fresh intro line (comment out if you prefer blank)
+        // addMessage('bot', "Hey, I’m here to listen. What’s on your mind today?");
+      }catch(err){
+        console.error("Reset error:", err);
+        addMessage('bot', "Couldn’t reset. Is the /reset endpoint running?");
+      }finally{
+        resetBtn.disabled = false; sendBtn.disabled = false; inputEl.disabled = false; inputEl.focus();
+      }
+    }
+
+    sendBtn.addEventListener('click', send);
+    inputEl.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); send(); }
+    });
+    resetBtn.addEventListener('click', resetChat);
+
+    // Fast mode toggle
+    function updateFastLabel(){ fastBtn.textContent = `Fast: ${FAST_MODE ? 'On' : 'Off'}`; }
+    fastBtn.addEventListener('click', ()=>{ FAST_MODE = !FAST_MODE; updateFastLabel(); });
+    updateFastLabel();
+
+    // Optional keyboard shortcut: Ctrl+R to reset (won’t block browser refresh)
+    document.addEventListener('keydown', (e)=>{
+      if (e.ctrlKey && e.key.toLowerCase() === 'r') {
+        e.preventDefault();
+        resetChat();
+      }
     });
 
-    // Kick off with empty message to get welcome prompt
-    sendMessage("");
+    // autosize
+    const autoGrow = () => { inputEl.style.height='auto'; inputEl.style.height = Math.min(inputEl.scrollHeight, 160)+'px'; };
+    inputEl.addEventListener('input', autoGrow); autoGrow();
   </script>
-  <script>
-if (window.location.search.includes("utm_source")) {
-  window.history.replaceState({}, document.title, window.location.pathname);
-}
-</script>
-
 </body>
 </html>

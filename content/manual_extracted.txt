@@ -1,0 +1,2443 @@
+A project funded by the Australian Government 
+
+AIMhi Stay Strong 
+Planning: 
+Brief Treatment Manual 
+Tricia Nagel, Kylie Dingwall 
+
+Attributions Here 
+
+V2.0 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Contents 
+
+Acknowledgements ........................................................................................... 3 
+Background ....................................................................................................... 4 
+eMental Health in Practice ............................................................................. 4 
+The AIMhi Theoretical Framework ................................................................. 4 
+Key steps for the AIMhi Stay Strong approach .................................................. 6 
+Rationale ........................................................................................................... 6 
+ .......................................................................................................................... 7 
+Using the Stay Strong Approach with clients ..................................................... 8 
+Cultural context .............................................................................................. 8 
+Rapport (good connection) ............................................................................ 9 
+The Four Step Stay Strong Plan .................................................................... 9 
+Step 1 and 2: Family and Strengths ............................................................. 10 
+Step 3 and 4: Exploring Worries and Setting Goals ..................................... 11 
+Setting goals for change .............................................................................. 11 
+Risk Management ........................................................................................... 13 
+Know early warning signs ............................................................................ 15 
+Have a crisis plan ........................................................................................ 15 
+Risk assessment .......................................................................................... 15 
+Suicide risk assessment .............................................................................. 15 
+Risk of harm to others .................................................................................. 16 
+Complete your risk assessment ................................................................... 16 
+Safe follow-up plans .................................................................................... 16 
+Managing risk – Crisis Contacts .................................................................. 17 
+24-Hour Telephone Counselling ...................................................................... 17 
+Diagnosis of mental illness .............................................................................. 17 
+Mental State Examination ............................................................................ 18 
+Kessler 10 (K10) .......................................................................................... 19 
+Additional information about mental illness .................................................. 20 
+Cultural assessment and belief systems ......................................................... 20 
+References ...................................................................................................... 21 
+Appendix A: List of Digital Mental Health Resources ...................................... 22 
+Appendix B: Practice Materials........................................................................ 28 
+1.  Sample stories from Stay Strong Plans .................................................. 28 
+2.  AIMHi Stay Strong App Motivational Care Planning - Adherence Scale . 29 
+3.  Goal Setting Activities ............................................................................. 34 
+4.  Example App Script ................................................................................ 38 
+
+2 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Acknowledgements 
+
+We  would  like  to  acknowledge  the  generous  contributions  of  Aboriginal  Mental 
+Health  Workers  on  the  Tiwi  Islands  and  in  Darwin,  and  of  many  health 
+professionals  in  the  Northern  Territory  and  across  Australia  who  have  engaged 
+with the AIMhi team and contributed their expertise to this story. In particular we 
+acknowledge  AIMhi  Indigenous1  researchers  past  and  present,  especially 
+Carolyn  Griffin,  Valerie  Thompson,  Jana  Mills,  John  Cusack  and  Daniel 
+Mulholland.  
+
+The  eMental  Health  in  Practice  (eMHPrac)  project  is  a  collaboration  between 
+Menzies  School  of  Health  Research,  the  University  Centre  for  Rural  Health, 
+Black Dog Institute and led by Queensland University of Technology. eMHPrac is 
+funded  by  the  Australian  Government  as  part  of  the  National  eMental  Health 
+Strategy.  
+
+Suggested citation: Nagel, T., & Dingwall K. M. (2014). AIMhi Stay Strong planning: 
+Brief treatment manual. Darwin: Menzies School of Health Research.  
+
+1 Please note that when we mention the term ‘Indigenous’ we include all Aboriginal and Torres 
+Strait Islander people and acknowledge their rich traditions and heterogenous cultures 
+
+3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Background 
+
+Hello and welcome to Yarning about Mental Health and the AIMhi mental health 
+research program. The AIMhi mental health team is based at Menzies School of 
+Health Research. The AIMhi program of research began in 2003 and has worked 
+collaboratively  with  Aboriginal  Mental  Health  Workers,  Aboriginal  and  Torres 
+Strait Islander organisations and senior members of Aboriginal and Torres Strait 
+Islander  communities.  For  over  a  decade  AIMhi  has  developed  a  range  of 
+culturally adapted information sheets, flip charts and the AIMhi approach to brief 
+therapy - Motivational Care Planning. The AIMhi Stay Strong Care Plan has now 
+been  translated  into  an  e-mental  health  resource,  the  AIMhi  Stay  Strong  App, 
+and is promoted within the eMental Health in Practice (eMHPrac) project. 
+
+eMental Health in Practice 
+e-Mental  health  (also  referred  to  as  digital  mental  health  resources)  provide 
+treatment  and  support  to  people  through  telephone,  mobile  phone,  computer, 
+smart  devices  and  online  applications.  They  range  from  the  provision  of  health 
+information,  peer  support  services,  virtual  applications  and  games,  through  to 
+real-time  interaction  with  clinicians  trained  to  assist  people  experiencing  mental 
+health issues. See Appendix A for links to other e-mental health resources.  
+
+The Australian Government’s e-Mental Health Strategy for Australia (DoH, 2014) 
+aims to improve awareness, knowledge and use of e-mental health resources. E-
+Mental  Health  in  Practice  (eMHPrac)  is  a  support  service  and  project  funded 
+implementation  and 
+through 
+promoting  awareness  of  e-mental  health  resources  to  health  professionals 
+working in primary healthcare (eMHPrac, 2018).  
+
+the  Strategy,  providing 
+
+training,  supporting 
+
+eMHPrac  is  a  collaboration  between  Menzies  School  of  Health  Research,  the 
+University Centre for Rural Health, Black Dog Institute and is led by Queensland 
+University  of  Technology.  As  part  of  the  eMHPrac  Indigenous  stream,  Menzies 
+provides  training  in  the  AIMhi  Stay  Strong  App  and  other  e-mental  health 
+resources  to  health  professionals  in  primary  healthcare  working  with  Aboriginal 
+and Torres Strait Islander clients. 
+
+The AIMhi Theoretical Framework  
+Motivational  Care  Planning  (MCP)  is  based  on  15  years  of  theoretical 
+development, clinical practice, and empirical research. This therapy is different in 
+many ways from traditional approaches to treatment.  MCP draws on a range of 
+brief  therapies  such  as  motivational  interviewing,  problem  solving  therapy, 
+positive  psychology  and  solution  focused  therapy  (Cuijpers,  van  Straten,  van 
+Sciak, & Andersson, 2009). The focus of the intervention is to promote behavior 
+change through reviewing the client’s social connections, individual strengths and 
+stressors.  It  has  a  focus  on  the  ‘here  and  now’  and  on  current  behavior  and 
+
+4 
+
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+planning for change to improve lifestyle choices. The motivation to make change 
+is  developed  through  the  comparison  of  individual  values  and  life  priorities  with 
+actions, life style behaviors or symptoms that are causing distress. The four step 
+intervention  explores:  family  and  friends,  strengths,  stressors  and  setting  goals 
+for change. 
+
+MCP shares principles of cognitive behavior therapy (CBT) such as: 
+
+•  Establishing a strong therapeutic alliance 
+•  Focus on discrete goals 
+•  Focus on the here-and-now 
+•  Cognitive reappraisal 
+•  Patient as collaborative partner (Karwoski, Garratt, & Ilardi, 2006) 
+
+MCP  shares  the  positive  psychology  aim  of  building  on  the  person’s  existing 
+strengths to enhance emotional wellbeing. The  ‘aim of positive psychology is to 
+catalyse  a  change  in  psychology  from  a  preoccupation  only  with  repairing  the 
+worst  things  in  life  to  also  building  the  best  qualities  in  life’  (Seligman,  2002). 
+MCP  also  has  overlap  with  motivational  interviewing  techniques,  in  particular 
+supporting  self-efficacy  and  developing  discrepancy  (Treasure,  2004)  and  with 
+solution  focused  therapy  which  also  focuses  on  competency  and  strength  in 
+clients and is underpinned by the following principles: if it’s working keep doing it, 
+if  it’s  not  working  stop  doing  it,  and  keep  therapy  as  simple as possible  (Nagel, 
+2007; O'Connell, 2005). 
+
+to 
+
+identify 
+
+in  which  clients  and  practitioners  collaborate 
+
+In  addition,  this  approach  is  aligned  with  principles  of  behavioural  activation 
+target 
+therapy 
+behaviours,  goals,  and  rewards  that  reinforce  non-depressive  or  healthy 
+behaviour,  which  has  also  been  shown  to  be  efficacious  and  cost  effective  in 
+comparison  with  CBT  (Veale  2008).  MCP  is  designed  to  be  delivered  in  one  or 
+two  sessions  by  workers  who  may  have  little  training  in  counselling  and  limited 
+time,  and  with  clients  who  may  have  low  literacy  or  language  difference  and  in 
+individual  or  group  settings.  These  aspects  of  the  MCP  intervention  render  it  a 
+‘low  intensity’  cognitive  behavioural  intervention  (Bennett-Levy,  Richards,  & 
+Farrand,  2010).  It  is  a  client  centred  model,  which,  similar  to  solution  focused 
+therapy, focuses on clients’ strengths and previous successes. There is a focus 
+on  working  from  the  client’s  understandings  of  their  concern/situation  and  what 
+they might want to do differently.  
+
+The  AIMhi  Stay  Strong  approach  has  some  key  differences  to  other  brief 
+therapies; it is culturally adapted for Aboriginal and Torres Strait Islander people 
+and  presents  a  holistic  model  of  mental  health  and  wellbeing.  The  Stay  Strong 
+approach uses colorful pictures to support a conversation about areas of stress-
+vulnerability  and  uses  metaphors  from  daily  life  to  promote  engagement  and 
+understanding.  MCP  begins  by  looking  at  the  role  of  family  support  and  client 
+strengths before worries are reviewed. Following these three steps, the client and 
+practitioner  discuss  setting  goals  for  life  style  change  using  simple  and 
+
+5 
+
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+achievable  steps  to  support  the  person  to  plan  for  change,  and  over  time 
+measure outcomes and celebrate successes. The simple step by step approach 
+allows  practitioners  to  acquire  MCP  skills  with  ease.  Evaluation  of  training 
+provided by the Menzies School of Health Research has shown that practitioners 
+value  the  training,  have  improved  confidence  and  knowledge,  and  continue  to 
+use  elements  of  the  approach  long  after  receipt  of  brief  training  (Dingwall, 
+Puszka, Sweet, Mills, & Nagel, 2015). 
+
+Key steps for the AIMhi Stay Strong approach 
+
+•  Review of family and other key people who are supportive 
+•  Review  of  strengths  in  a  holistic  framework  inclusive  of  culture  and 
+
+spirituality 
+
+•  Review of stressors and worries 
+•  Review of reasons to change linked with family, strengths and stressors 
+•  Simple goal setting and discussion  
+•  Focus on developing simple steps to the goals  
+•  Review of steps and goals over time 
+
+Rationale  
+
+A person’s ‘balance’ and wellbeing is a result of resilience factors and risk factors 
+that constantly interact (Mueser et al., 2002). At any time decisions can be made 
+that  might  change  the  balance  and  thus  decrease  or  increase  a  person’s 
+vulnerability  to  mental  illness.  Knowing  which  of  these  factors  are  important  in 
+relapse  of  illness,  and  what  can  be  done  in  terms  of  change,  is  an  important 
+component  of  self-management.  The  key  message  is  that  of  the  need  to  build 
+strengths  and  mitigate  stressors,  in  order  to  promote  resilience  and  diminish 
+vulnerability  to  mental  illness.  Some  risk  factors  are  beyond  a  person’s  control 
+such as genetic or environmental influences, but others are within an individual’s 
+power  to  change  and  influence.  Current  distress  is  thus  caused  by  diminished 
+healthy behaviours through choice and/or lack of opportunity. These behaviours 
+negatively  influence  identity  and  self-efficacy  and  lead  to  vulnerability  to 
+depression  and  a  range  of  other  mental  illnesses.  Healthy  behaviours  are 
+culturally  informed  and  include  cultural  and  spiritual  activities,  family  and 
+community engagement as well as physical activity. Planning and supporting and 
+reinforcing healthy and rewarding behaviours will promote resilience and improve 
+wellbeing  through  positive  reward,  improved  self-identity  and  greater  self-
+efficacy. 
+
+6 
+
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Stay Strong is a different approach 
+
+We  have  a  yarn  first  about  family  and 
+strengths,  spending 
+time  developing 
+trust  and  relationship  rather  than  going 
+straight to the problem.  
+
+family  and  strengths  as 
+We  use 
+motivation for change. The discussion of 
+strengths  and  stressors  is  holistic  and 
+covers  physical,  cultural,  mental,  and 
+social aspects to life. 
+
+The  person  controls  the  process.  They 
+identify each strength and each stressor 
+of their own, we don’t write anything that 
+they  see 
+they  haven’t  volunteered, 
+everything  that  is  written,  they  own  the 
+plan, and take home a copy of the plan. 
+
+7 
+
+ 
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Using the Stay Strong Approach with clients 
+
+Cultural context 
+Here is an example of the introduction to the AIMhi approach which we use to set 
+the  cultural  context.  The  following  text  is  provided  by  one  of  the  AIMhi 
+researchers/Aboriginal Mental Health Workers John Cusack: 
+
+“Hello and welcome to Yarning about Mental Health.  
+Our people have strong culture. We are artists and 
+storytellers, we are sporting legends and skilled hunters, we 
+are musicians and dancers and uncles and aunties and 
+grandmothers and grandfathers. Most of all we are teachers, 
+and we are teaching our children to find their way in a 
+modern world.  
+Our kids need a guide to navigate and find their way in the 
+modern world … they need to take culture with them…and to 
+bring both worlds into one…They need to be strengthened by 
+culture… 
+We can teach them how to be an Indigenous person in the 
+non-Indigenous world by having that support of language 
+and family and community and kinship keeping them strong.  
+Another important thing to teach them is how to do more of 
+the things that keep them strong. Things like art and music 
+and storytelling, and work that keeps family and culture 
+alive. That way there isn’t that gap in their lives. That way 
+there isn’t that emptiness where culture used to be.  
+It’s when our children get that gap, and they don’t know who 
+they are or where they belong, that’s when that mental health 
+problems can take over and it can link with drugs and 
+alcohol and humbug or violence.” 
+
+8 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Rapport (good connection) 
+Understanding and communicating with Aboriginal clients is usually helped by: 
+
+•  having supportive and appropriate (e.g. right kinship) family members 
+
+present 
+
+•  working with an Aboriginal Health or Mental Health Worker (AMHW) 
+recognising that some people feel more comfortable talking outdoors 
+• 
+•  establishing which languages are spoken and what level of English is 
+
+understood 
+
+•  sitting side by side rather than across from people/clients to mediate eye 
+
+contact 
+recognising that some people may have hearing difficulties 
+
+• 
+•  avoiding direct questions  
+•  avoiding direct eye contact 
+•  making interactions concise and meaningful so as not to sit for too long 
+talking about strengths and family relationships before talking about the 
+• 
+problems 
+
+•  using visual guides to assist conversation 
+•  using stories to assist connection and rapport, and 
+• 
+
+recognising that client communicative norms may include long pauses and 
+allowing time for response before prompting them 
+
+The Four Step Stay Strong Plan  
+The 4 step plan is a way of engaging with clients before you assess them or as a 
+goal setting brief intervention at the end of your assessment. The first two steps 
+in  the  Stay  Strong  Approach  are  about  getting  to  know  people.  Whether  it’s 
+someone  you  are  working  with,  or  someone  you  are  going  to  interview  –  it’s  a 
+good idea to get to know them a bit first. One of the ways to do that is to take into 
+account  the  above  rapport  suggestions  and  to  talk  about  family,  and  to  get  a 
+sense  of  who  is  important  to  them.  Another  way  to  do  it  is  to  talk  about  what 
+activities we like to do – what things keep us strong.  
+
+The  plan  uses  the  metaphor  of  a  tree  to  talk  about  mental  health.  The  Grow 
+Strong Tree is a picture of a plant that represents our mental health  – with four 
+root systems and four healthy leaves. The roots represent the foundations of our 
+mental health - the Spiritual, Physical, Family, Social and Work, and Mental and 
+Emotional components of our lives. 
+
+9 
+
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Step 1 and 2: Family and Strengths 
+These two steps are about developing rapport and sharing understandings.  
+
+•  Talking about our strengths, family, friends and activities is a good way to get 
+
+to know someone.   
+
+•  Talking about family can help us to see the networks of healing and the paths 
+
+for support of that client and that family. 
+
+•  As we talk about family and strengths we can begin to know what is already 
+
+strong and have a yarn about how to make it stronger. 
+
+•  Looking at family connections and recognising their importance helps to link 
+
+them in to the steps to goals for change. 
+
+•  Plans for change are stronger if support people named on the plan hear about 
+
+their role with client consent. 
+
+•  The plan can strengthen the support networks surrounding the client. 
+•  Using the Stay Strong App we can type in names of supportive  family and friends 
+and select the relationship they have to the client and the role they play in their life 
+
+ What you might say: Step 1  
+
+One of the important ways in which we can stay strong and have balance in our 
+lives  is  to  have  strong  people  around  us  who  help  to  keep  us  feeling  okay 
+during  the  tough  times.  This  is  your  family  map,  and  this  is  you  in  the  centre. 
+Who  would  you  put  around  you  on  your  family  map?  Who  is  it  that  helps  to 
+keep you strong and in balance? What relationship do they have to you? What 
+role  would  you  say  they  have  in  your  life?  E.g.  someone  you  can  talk  to, 
+someone who is always there… 
+
+•  Talking about strengths helps to remind us of good things in our lives. The things we 
+
+value about ourselves and the people around us.  
+
+•  Talking about our strengths helps to establish rapport and connection between 
+
+people 
+
+•  Using the Grow Strong Tree to describe strengths is an easy way to start talking 
+
+about wellbeing and mental health. 
+
+•  Using the Stay Strong App we can select the strengths that fit and type a word or two 
+
+that describe that strength in more detail.   
+
+10 
+
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+ What you might say: Step 2 
+
+There  are  four  main  ways  in  which  we  keep  strong  in  our  lives.  Spiritual, 
+physical, family, work and emotional strengths keep us in balance –like strong 
+roots  of  a  tree.  When  we  are  in  balance  we  grow  strong  mental  health. 
+Worries  and  stress  and  trouble  can  take  away  our  balance.  Changes  for 
+strength  can  help  us  find  balance  again.  Looking  at  this  tree…what  sorts  of 
+things in your life – spiritual, physical, social or mental and emotional help to 
+keep you strong? The more strength we have, the stronger we can be - even 
+during  tough  times.  Look  at  each  of  the  pictures  on  this  tree.  Do  they 
+represent  something  that  fits  with  your  own  experience?  Tell  me  a  little  bit 
+more about that?  
+
+Step 3 and 4: Exploring Worries and Setting Goals 
+Having  taken  time  to  review  positive  aspects  of  people’s  lives  there  is  more 
+chance  that  you  have  established  rapport  before  you  begin  to  talk  about  the 
+sensitive  areas  of  concern  in  their  lives.  An  important  difference  in  the  Stay 
+Strong approach is that we explore worries after talking about strengths and that 
+we allow the person to volunteer them rather than directly asking questions. 
+
+3What you might say: Step 3 
+
+Moving  on…  looking  at  the  tree  again  …worries  in  our  lives  can  take  our 
+balance away. What sorts of spiritual, physical, social and mental and emotional 
+things take your strength away? Do any of these fit with you? Tell me a little bit 
+more about that? 
+
+Setting goals for change 
+Once the first three steps are complete we are in a good position to be thinking 
+and planning for change. Our goals are the things we want to change. We need 
+to  think  of  steps  to  these  goals  and  we  want  the  goals  and  the  steps  to  be 
+achievable  and  practical  and  simple.  Steps  are  the  goals  broken  down  to 
+manageable,  smaller actions. If  you  have  a  goal to  do further study  –  a  step  to 
+that goal might be to find about more about possible study courses, another step 
+might be to get some more information, or to talk to someone or to make a phone 
+
+11 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+call. Steps tend to be more specific and more detailed than goals. The best way 
+to  plan  goals  and  steps  is  to  ask  four  questions:  What?  Why?  How?  Who? 
+When?  
+
+We are encouraging clients to identify their 
+own personal goals and their own steps to 
+those goals.   
+
+As we encourage goal setting and 
+communication within the support network- 
+we support empowerment of that network 
+and all of those within the network. 
+
+SMART goals 
+
+Another way to think about goals is to aim to set ‘SMART’ goals. SMART goals 
+are Specific, Measurable, Attainable, Realistic and Timely. 
+
+Specific:  A  specific  goal  has  a  better  chance  of  being  reached  than  a  general 
+goal. To set a specific goal aim to answer the “W” questions: 
+
+What:  
+Who:   
+Where: 
+When: 
+
+What do I want to do? 
+Who can help? 
+Identify a place related to the goal. 
+When will you do it/how long will it take 
+
+Measurable: To see if a goal is measurable, ask questions such as…… 
+
+•  How much? How many? 
+•  How will you know when it is reached? 
+
+Attainable: When you identify goals that are most important to you, you begin to 
+figure out ways you can realise them. This is where the client choosing their own 
+goals  is  important,  as  they  are  the  one  that  best  knows  what  is  possible.  You 
+might think and talk about goals that have been reached in the past, it helps to 
+remember what you can do if you really try.  
+
+Realistic: A goal is realistic if you want it and you can actually do the steps that 
+are needed to reach it. The steps are very important, because they break down a 
+big task into smaller, more manageable steps. 
+
+Timely:  A  goal  works  best  when  it  is put  within  a  time  frame  so  that  you  know 
+when to begin and how you are going to continue. 
+
+12 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+ What you might say: Step 4 
+
+Thinking  about  the  people  in  your  life  who  keep  you  strong  and  thinking 
+about  the  good  things  that  you  do  and  that  you  value,  and  thinking  about 
+your  worries,  what  would  be  one  small  thing  that  you  might  think  about 
+changing? Anything else? 
+•  Tell me a bit more about what that change means for you 
+•  Why would making that change be a good thing to do? 
+•  Out of those changes, what would be the most important thing to change 
+
+• 
+
+right now?  
+If that’s the most important goal for now let’s talk about how you could go 
+about it? 
+
+•  Have you made changes like that before? Tell me about how that went. 
+•  What small step could you do first? Who could help?  
+•  Remember, anyone can make changes when they are ready small steps 
+
+can lead to big changes 
+
+Build motivation 
+
+Build  confidence  by  reviewing  examples  of  success  –  either  past  successful 
+changes  the  client  has  made  or  others  (such  as  “Robbie’s  story”  which  is  an 
+AIMhi video about making successful changes)   
+
+Promote  discrepancy  and  dissonance  by  comparing  the  ‘ideal’  and  positive 
+strengths  a  person  reports  on  their  strengths  page  with  the  worries  that  they 
+have.  Highlight  differences  and  promote  any  links  which  arise  throughout  the 
+discussion. 
+
+Maintain rapport through avoiding suggestions and asking direct questions. 
+
+Risk Management  
+In  the  context  of  the  high  risk  associated  with  mental  illness,  strategies  to 
+educate service providers and the wider community about immediate actions and 
+pathways  to  care are vital.  Campaigns  by  Rotary  and  ‘beyondblue’ and  specific 
+community  education  packages  have  been  major  steps  toward  improved 
+community mental health literacy (LivingWorks). In addition, adapted community 
+training  packages  such  as  ‘Mental  Health  First  Aid’  (Beyondblue,  2008; 
+"http://bluepages.anu.edu.au/,"  ;  "http://moodgym.anu.edu.au,"  ;  Kitchener  BA  & 
+Jorm  AF,  2002)  Suicide  Story  (Mental  Health  Association  of  Central  Australia, 
+2018)  and  the  AIMhi  resources  have  offered  Indigenous  specific  training 
+targeting  suicide  prevention  and  improved  access  to  treatment. A  key  message 
+of  suicide  prevention  is  that  any  person  might  be  approached  for  help  by 
+
+13 
+
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+someone at risk and will benefit from developing basic skills.  
+
+Risk Management tips below apply to all of us. 
+
+Pay attention 
+Read signs of concern  
+Trust your hunches  
+Take any talk of suicide seriously  
+Show respect 
+Try to understand  
+Be yourself  
+Take them seriously  
+
+Reach out 
+Show you care  
+Tell them what you noticed  
+Take time to listen  
+Check it out 
+Say things like “lately I’ve noticed…”  
+Ask others what they’ve noticed  
+If in doubt check it out  
+
+Give support 
+Let them talk  
+Explore other options  
+Build realistic hope  
+Get more support (eg family, mates, counsellors, crisis lines)  
+Ask about suicide 
+If concerned, ask directly “Are you thinking of suicide?”  
+
+Get help 
+Don’t leave if there’s a risk of suicide  
+Remove available means of harm  
+Know your limits ... involve others, get further help  
+Follow up ... stay alert to ongoing needs / risk   
+Keep safe 
+Focus on safety first  
+Encourage no self harm  
+Look out for your safety and safety of others  
+
+Avoid 
+‘Quick fixes’ & ‘cheer up’ advice  
+Telling them not to worry  
+Drinking to avoid the pain  
+(Lifeline, 2010) 
+
+14 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Know early warning signs  
+Everyone gets stressed sometimes and we all have warning signs that stress is 
+building up. If we pick up stress early we can do something about it before it gets 
+out of control. In the same way if we pick up mental illness early we can make 
+changes before we have a relapse. Common early warning signs of relapse are:   
+
+irritability (feeling ‘cranky’),  
+tension or worry,  
+
+• 
+• 
+•  social withdrawal (sitting down alone),  
+•  poor appetite,  
+•  poor sleep. 
+
+These are early changes that happen before relapse. Knowing warning signs 
+helps people to avoid relapse and to recover from mental illness by having more 
+control of it. 
+Have a crisis plan 
+Work out what you will do in a crisis, when your early warning signs are getting 
+out of control. Plan where you will get help, who you will go to, and what you will 
+do.  You  can  write  this  on  your  stay  strong  plan  and/or  talk  it  through  with  your 
+support person. 
+Risk assessment 
+There are three main sorts of risk – risk of hurting yourself intentionally, or hurting 
+others intentionally, and vulnerability (of getting hurt accidentally through poor 
+decision-making). Consider the following questions for vulnerability risk:  
+
+•  Does this person have trouble looking after themselves? 
+•  Do they have trouble protecting themselves from others – and not getting 
+
+hurt? 
+
+•  Are they at risk when they are away from their support and carers and 
+
+family? 
+
+Suicide risk assessment 
+Important background factors for suicide risk are: 
+
+Suicide attempts in the past 
+Unmarried / unemployed / not going to school 
+Illness – physical or mental 
+Ceremonies to say goodbye (making a will or giving way possessions) 
+Isolation socially 
+Drugs, Alcohol and other volatile substances 
+Events – grief, loss, stress, knowing people who have committed suicide 
+
+15 
+
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Important immediate factors for suicide risk are: 
+
+Plan – having a plan to hurt themselves 
+Lethality – having a plan that is likely to result in injury or death 
+Access – the person being able to carry out their plan 
+Negative views of self and future (they want to die) 
+
+Risk of harm to others 
+Past violence is the main risk factor for more violent behaviour – but also think 
+about: 
+
+•  Substance Misuse 
+•  Family history 
+•  Anti-social behaviours 
+
+Complete your risk assessment  
+You may already have a risk assessment or risk management template to use as 
+a guide for some of the risk factors mentioned above. It is important to use  your 
+knowledge of the client, their discussion or their worries, and by asking questions 
+to fill in gaps. The purpose of your assessment is to decide on today’s risk – but 
+you can use past history and other information to come to your decision. If there 
+are  any  signs  of  risk,  ensure  that  you  make  the  appropriate  arrangements  to 
+ensure that the risk is managed according to the severity of your assessment. 
+
+Safe follow-up plans 
+If you are not sure whether a person will be safe when you have seen 
+them – check that you have the following things in place: 
+
+Support and supervision-a place to stay, someone reliable to stay with 
+Appointment time given for follow up 
+Follow up and treatment is arranged 
+Engagement with your plan is in place (they think it is a good idea) 
+Resolution or partial resolution of the crisis (something has changed 
+for the better) 
+
+If  you  can’t  have  this  safer  plan  in  place  and  you  are  worried  about  risk–  then 
+consider  supported  and  supervised  arrangements  including  a  safe  house  or 
+hospital. 
+
+Talk to your supervisor, look at guidelines such as the CARPA manual, take definite 
+action, and write all of your decisions in the appropriate file. 
+
+16 
+
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Managing risk – Crisis Contacts 
+
+24-HOUR TELEPHONE COUNSELLING  
+
+•  Emergency 000 
+•  Lifeline 13 11 14 
+•  Kids Helpline 1800 551 800 
+•  MensLine Australia 1300 789 978 
+•  Suicide Call Back Service 1300 659 467 
+•  Beyond Blue 1300 22 46 36 
+•  Headspace 1800 650 890 
+•  QLife  1800 184 527 
+•  State-wide Crisis Numbers Blue Pages  
+
+Other Mental health helplines and services can be found by 
+searching the HealthDirect web page. 
+
+Diagnosis of mental illness 
+
+People who have lots of worries can get a mental illness – especially if they have 
+been  unwell  before,  or  if  it  runs  in  the  family.  The  pattern  of  mental  illness  is 
+different for different  people. The  pattern  is about  changes  in  thoughts, feelings 
+and behaviour – changes in what people say and do. Some people hear voices, 
+some  people  just  get  very  sad  and  stay  inside  the  house  all  day,  some  people 
+get  too much  energy  and fight and  shout and  cause  trouble,  some  people hear 
+voices,  some  people  get  very  worried  and  nervous  and  anxious,  and  some 
+people get mixtures of all of those things. It’s important to work out the pattern of 
+someone’s  illness.  Different  patterns  respond  to  different  medicines  and 
+treatments. If people with mental illness get to know their own illness pattern they 
+can recognize and treat it early. Four important patterns are anxiety, depression, 
+mania  and  psychosis.  The  AIMHI  information  sheets  talk  about  the  pattern  of 
+thoughts and feelings and behaviors for those four sorts of mental illness. 
+
+There are four main ways to diagnose mental health problems.  
+
+1.  Talk to the person about how they are going – take a history  
+2.  Talk  to  family  and  others  about  how  they  are  going  –  collect  collateral 
+
+history  
+
+3.  Check out their physical health – do a physical examination 
+4.  Listen  to  what  they  say  and  what  they  do  carefully  and  closely    –  do  a 
+
+mental state examination 
+
+17 
+
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Mental State Examination 
+Assessing a person’s mental state is like reading their body language. Most of us 
+can  tell  how  someone  is feeling  without  them  saying  anything. When  we  watch 
+and  listen  closely  we  can  have  more  information  to  help  us  to  decide  about 
+diagnosis  and  risk.  We  can  use  the  following  simplified  list  of  six  headings  to 
+structure our assessment of body language. 
+
+•  Appearance:  Neat? Clean? Strange? 
+•  Behaviour: Calm? Agitated? Appropriate? Cooperative? Distracted? 
+•  Conversation:  Silly talk? Wrong talk? Mixed up talk? Fast talk? 
+•  Affect:  Unhappy? Angry? Too happy? Afraid? Unconcerned? 
+•  Perception: Hearing voices? Seeing things? Talking to self?  
+•  Cognition: Remembering OK? Confused? 
+
+Activity 
+
+     Mental state examination adds information to our assessment. 
+
+Consider the following example – you are seeing a 26-year-old woman with two 
+children  who  says  she  has  been  sad  since  her  partner  left  her  12  months  ago. 
+She is physically well on examination. Her mother says that she used to work full 
+time, but she has not been going out of the house for 2 months. You see her with 
+the  Aboriginal  Mental  Health  Worker  and  her  mother.  Below  are  two  different 
+mental state examinations. 
+
+Which worries you more – Scenario 1 or Scenario 2?  
+
+Scenario 1  
+Appearance    
+Behaviour 
+Conversation   
+Affect   
+Perception     
+Cognition 
+
+Scenario 2 
+Appearance    
+Behaviour   
+Conversation   
+Affect   
+Perception  
+Cognition   
+
+neat and clean 
+shy but appropriate 
+slow but appropriate  
+sad and anxious 
+no abnormal perception 
+fairly good attention and concentration  
+
+dirty clothes and unwashed appearance 
+withdrawn, no eye contact, slow movements 
+only occasional words 
+sad  
+no abnormal perception 
+poor concentration and easily distracted 
+
+18 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Answer 
+
+Scenario 2 suggests more severe mental illness and greater risk. 
+The same history and the same collateral history and the same physical findings. 
+A different mental state examination can lead us to have a different assessment 
+of the case.  
+
+Kessler 10 (K10) 
+The  Kessler  Psychological  Distress  Scale-10  (K10),  developed  by  Professors 
+Ron  Kessler  and  Dan  Mroczek,  is  a  10  item  questionnaire  which  measures 
+psychological  distress based  on  questions  about  people's  level of nervousness, 
+agitation,  psychological  fatigue  and  depression  in  the  past  four  weeks  prior  to 
+interview (ABS, 2001). The K10 is available on the android version of the App.  
+
+For each  question,  there  is a five-level response  scale  based  on the  amount of 
+time  that  a  respondent  experienced  those  particular  feelings.  The  response 
+options are:  
+
+1.  None of the time  
+2.  A little of the time  
+3.  Some of the time  
+4.  Most of the time  
+5.  All of the time. 
+
+Each of the items are scored from 1 for 'none' to 5 for 'all of the time'. Scores for 
+the ten items are added together, clients can have a minimum possible score of 
+10 and a maximum possible score of 50, with low scores indicating low levels of 
+psychological distress and high scores indicating high levels of psychological 
+distress. 
+
+K10 results are commonly grouped for output. The results are grouped in the 
+following four levels of psychological distress:  
+
+•  Low (scores of 10-15, indicating little or no psychological distress)  
+•  Moderate (scores of 16-21)  
+•  High (scores of 22-29)  
+•  Very high (scores of 30-50). 
+
+19 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Additional information about mental illness 
+•  Mental  Health  is  about  being  well  and  strong  and  balanced  in  our  spiritual, 
+
+physical, social and emotional lives. 
+
+•  Traditional  healers,  talk  therapies  and/or  social  changes  can  be  better  than 
+
+medication alone for some people. 
+
+•  Engaging  Aboriginal  Health  Workers  or  Aboriginal  Mental  Health  Workers 
+
+could be important. 
+
+•  Mental Illness is like physical illness – the sooner you treat it the sooner you 
+
+get better. 
+
+•  Life events, change of medication, or substance misuse are common causes 
+
+of relapse and getting sick again. 
+
+• 
+
+If  we  have  too  many  troubles  any  one  of  us  can  get  sick,  and  get  out  of 
+balance. 
+
+•  Early  warning  signs  –  such  as  change  of  sleep  or  appetite,  or  increased 
+restlessness  or  tension,  or  not  wanting  to  be  with  other  people,  are  the 
+signals to go and get extra treatment and help. Everyone has his or her own 
+early warning signs. 
+
+•  Medication, life style change, and increased support in tough times can help 
+
+to avoid relapses and to stop people getting sick again. 
+
+•  People  make  changes  in  their  lives  when  they  are  ready.  There  are  lots  of 
+
+different ways to change. 
+
+•  Often small changes in our spiritual, physical, social and emotional lives are 
+
+all that is needed to be healthy and in balance again. 
+
+Cultural assessment and belief systems 
+
+Culturally-shaped  belief  systems  and  spirituality  can  impact  on  the  way  mental 
+health and mental illness is expressed. When Aboriginal people talk about being 
+cursed or seeing spirits it may be a normal experience within their belief systems  
+and  it  may  be  misinterpreted  as  ‘psychosis’.  The  only  way  to  be  sure  whether 
+unusual behaviour is culture or illness is to seek advice from a family member, a 
+health  worker,  or  a  mental  health  worker.  Only  when  you  have  a  three  way 
+assessment  can  you  be  sure  that  you  understand  the  whole  problem  and  have 
+ideas for a holistic solution. 
+
+20 
+
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+References 
+
+ABS. (2001). Use of the Kessler Psychological Distress Scale in ABS Health Surveys.   
+
+Retrieved April 2018, 2018, from 
+http://www.abs.gov.au/ausstats/abs@.nsf/papersbyReleaseDate/4D5BD3
+24FE8B415FCA2579D500161D57 
+
+Bennett-Levy, J., Richards, D., & Farrand, P. (2010). The Oxford guide to low intensity 
+
+CBT interventions. Oxford: Oxford University Press,. 
+
+Beyondblue. (2008). Available from URL: http://www.beyondblue.org.au/ Retrieved 
+
+February, 2010 
+
+Cuijpers, P., van Straten, A., van Sciak, A., & Andersson, G. (2009). Psychological 
+
+treatment of depression in primary care: a meta-analysis. Br J Gen Pract.  
+Dingwall, K. M., Puszka, S., Sweet, M., Mills, P. P. J. R., & Nagel, T. (2015). Evaluation 
+of a culturally adapted training course in Indigenous e-mental health. Australasian 
+Psychiatry, 23(6), 630-635. doi: 10.1177/1039856215608282 
+
+DoH. (2014). E-mental health strategy for Australia.   Retrieved April 2018, 2018, from 
+
+http://www.health.gov.au/internet/main/publishing.nsf/Content/mental-
+pubs-e-emstrat 
+
+eMHPrac. (2018). eMHPrac Training and Support.   Retrieved April 2018, 2018, from 
+
+http://www.emhprac.org.au/ 
+
+http://bluepages.anu.edu.au/.    
+http://moodgym.anu.edu.au.    
+Karwoski, L., Garratt, G., & Ilardi, S. (2006). On the Integration of Cognitive-Behavioral 
+
+Therapy for Depression and Positive Psychology. Journal of Cognitive 
+Psychotherapy Summer, 20(2), 159-170.  
+
+Kitchener BA, & Jorm AF. (2002). Mental Health First Aid Manual. Canberra: Centre 
+
+for Mental Health Research. 
+
+Lifeline. (2010). Tool kit: Suicide Prevention Information for Aboriginal & Torres Strait 
+
+Islander people. A self-help resource to help people living with mental illness. 
+from https://www.lifeline.org.au/static/uploads/files/suicide-prevention-
+aboriginal-torres-strait-island-wffkdpatqknq.pdf 
+
+LivingWorks.   Retrieved 26/04/2018, 2018, from https://www.livingworks.net/ 
+Mental Health Association of Central Australia. (2018). Suicide Story.   Retrieved June, 
+2018, from https://mhaca.org.au/education-and-community-awareness/aboriginal-
+suicide-prevention/ 
+
+Mueser, K., Corrigan, P., Hilton, D., Tanzman, B., Schaub, A., Gingerich, S., . . . Herz, 
+M. (2002). Illness Management and Recovery: A Review of the Research. 
+Psychiatr Serv, 53(10), 1272-1284.  
+
+Nagel, T. (2007). Motivational care planning: brief interventions in Indigenous mental 
+
+health. Australian Family Physician, 37(12), 996-1001.  
+
+O'Connell, B. (2005). Solution focused therapy. London: Sage Publications Ltd. 
+Seligman, M. E. P. (2002). Authentic Happiness: Using the New Positive Psychology to 
+
+Realize Your Potential for Lasting Fulfillment. New York: Free Press. 
+Treasure, J. (2004). Motivational interviewing. Advances in Psychiatric Treatment, 10, 
+
+331-337.  
+
+21 
+
+ 
+ 
+Appendix A: List of Digital Mental Health 
+Resources  
+
+iBobbly Suicide Prevention App 
+
+There are not enough health workers available to provide suicide prevention 
+services in rural and remote areas, and often people don’t ask for help because 
+they feel disconnected, ashamed or are worried about anonymity. ibobbly, an 
+app aimed at suicide prevention, can be used anonymously and may be one way 
+to reach some at-risk young people. The app delivers treatment based on 
+Acceptance and Commitment Therapy (ACT), which uses mindfulness and 
+values-based action and draws on metaphors, stories and imagery. The project 
+began as a partnership with Alive & Kicking Goals! (AKG) in the Kimberley, a 
+community controlled suicide prevention organisation. The first version of the app 
+is being piloted to see if it will reduce suicidal thinking, depression, distress, and 
+impulsivity.  
+
+•  vimeo.com: Bluesbusters 1 Girls 
+•  vimeo.com: Bluesbusters 2 Boys 
+
+Head to Health 
+
+Head to Health is a national mental health and wellbeing website for both the 
+general public and health professionals. The site is managed by Health Direct as 
+part of the Australian Government Department of Health Australian e-Mental 
+Health Strategy. The website assists health professionals and their clients to find 
+relevant mental health and wellbeing information, online programs, services, 
+helplines and other resources. Head to Health resources are sourced from the 
+leading publically funded health focused organisations in Australia including 
+beyondblue, Black Dog Institute, ReachOut.com, Lifeline and many more.  
+
+•  headtohealth.gov.au  
+
+Mindspot 
+
+The MindSpot Clinic is an innovative national mental health service that provides 
+virtual assessment and treatment for adults with anxiety and depression. Since 
+launching in Dec 2012, the MindSpot Clinic has provided services to more than 
+45,000 Australian adults. Mindspot also have an Indigenous Wellbeing Course 
+designed to help Aboriginal and Torres Strait Island adults to manage 
+symptoms of depression (including low mood) and anxiety (stress, worry, panic, 
+social anxiety). MindSpot is funded by the Australian Department of Health, and 
+free to Australian adults aged 18 years and over.  
+
+•  mindspot.org.au 
+
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+On Track  
+
+Provides programs for concerns about mental and physical health including 
+concerns about alcohol, alcohol and depression, unusual experiences/early 
+psychosis, flood and storm recovery, diabetes. The sites resources are a mix of 
+programs, information, quizzes and advice and provides a program for carers. 
+
+•  ontrack.org.au   
+
+Stayin on Track 
+
+This is a discussion forum developed by Aboriginal men for Aboriginal dad. It is a 
+place to yarn about being a dad and helps support dads through fathering at a 
+young age. 
+
+•  stayinontrack.com 
+
+myCompass 
+
+Developed by a team of health professionals at the Black Dog Institute, and 
+funded by the Australian Government, myCompass is a pioneering e-health 
+initiative designed to simply and effectively promote mental health and wellbeing. 
+Accessible 24/7 from any internet-enabled computer, mobile phone or iPad, the 
+myCompass self-help program assesses user symptoms, then provides a 
+personalised and interactive program that includes online psychological tools, 
+round-the-clock monitoring of moods and behaviours and motivational tips via 
+email and SMS. Most importantly of all, clinical evidence shows that it works.  
+
+•  mycompass.org.au 
+
+National Eating Disorders Collaboration 
+
+The National Eating Disorders Collaboration (NEDC) brings expertise, 
+experience and evidence from leaders in the field together in one place. Our 
+primary purpose is to make eating disorders information a lot more accessible for 
+everyone. The website provides information and links for people affected by 
+eating disorders, carers and friends, teachers and health professionals. 
+
+•  nedc.com.au 
+
+Bite Back 
+
+Targets young people (12-25 years) and aims to promote wellbeing and 
+resilience through engaging psycho-education, positive psychology and related 
+approaches. 
+
+•  biteback.org.au 
+
+23 
+
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+BluePages  
+
+Provides information about depression and its treatment. It includes reviews of 
+the available scientific evidence for a wide range of treatments, information about 
+the experience and symptoms of depression and resources/services that can 
+help. 
+
+•  bluepages.anu.edu.au 
+
+BlueBoard  
+
+An online support group for people aged 18 years or over who are affected by 
+depression, bipolar disorder, anxiety, eating disorders, borderline personality and 
+related disorders. It aims to reduce stigma, and to provide support, hope and 
+space to share successful coping strategies. BlueBoard is moderated with strict 
+protocols to enhance safety and privacy. 
+
+•  blueboard.anu.edu.au 
+
+ReachOut.com 
+
+Targets individuals under the age of 25. It includes peer support forums, tips, 
+links and information for coping with tough times and improving wellbeing, 
+volunteering and social engagement. The site also has a list of professionally 
+reviewed apps and tools that are available to encourage health and wellbeing. 
+
+•  au.reachout.com 
+
+YouthBeyondBlue 
+
+Targets young people aged between 12 –25 and provides psycho‐ education 
+and links to BeyondBlue’s services including phone support and a medical and 
+allied health services locator. 
+
+•  youthbeyondblue.com 
+
+Butterfly Foundation 
+
+Provides information, support and referrals for people affected by eating 
+disorders. Includes telephone and email support. 
+
+•  thebutterflyfoundation.org.au 
+
+Counselling Online 
+
+24/7 text-based counselling for people concerned about their own or other 
+peoples’ substance use. 
+
+•  counsellingonline.org.au  
+
+24 
+
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+eheadspace 
+
+A confidential, free and secure space for young people 12 –25 and their families. 
+Provides chat, email or phone contact with a qualified youth mental health 
+professional. eheadspace can help with a broad range of issues like bullying, 
+drug and alcohol issues, depression and anxiety, relationships, concerns about 
+friends, study and work, fitting in and isolation. Can also support parents and 
+carers worried about a young person. 
+
+•  eheadspace.org.au 
+
+Gambling online 
+
+24/7 text and email counselling for people concerned about their own or another 
+person’s gambling. 
+
+•  gamblinghelponline.org.au 
+
+KidsHelpline Online Counselling  
+
+A web-based counselling service for people aged between 5 – 25 years and lets 
+you connect one-on-one, in real time, with a Kids Helpline counsellor over the 
+web. 
+
+•  kidshelp.com.au/teens 
+
+Lifeline Online Counselling 
+
+A short-term support service for people who are overwhelmed and having 
+difficulty coping or staying safe. It occurs in real time using ‘chat’ technology with 
+a Lifeline worker. Currently available 8pm-4am (AEST) 7 days. 
+
+•  lifeline.org.au  
+
+Suicide Call Back Service 
+
+Offers text-based online counselling with a professional counsellor. The service 
+is available for people affected by suicide, including people who are feeling 
+suicidal, people who are worried someone they know may be suicidal, and 
+people who have lost someone to suicide. 
+
+•  suicidecallbackservice.org.au  
+
+e-couch 
+
+Modules for depression, generalised anxiety and worry, social anxiety, 
+relationship breakdown, and loss and grief. It provides evidence-based 
+information and teaches strategies drawn from CBT, Interpersonal Therapy, 
+relaxation and physical activity. People can access information without 
+registration or register for the full program. 
+
+25 
+
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+•  ecouch.anu.edu.au  
+
+MoodGYM 
+
+Teaches skills drawn from CBT to help prevent and manage the symptoms of 
+depression. It was originally designed for young people but is used by people of 
+all ages. The program provides 5 modules which each take about 30 minutes to 
+complete. 
+
+•  moodgym.anu.edu.au 
+
+BRAVE Program 
+
+Helps children and teens overcome anxiety by teaching strategies for managing 
+anxiety-provoking situations. The programs are free, and provide ways for 
+children and teenagers to better cope with their worries. There are also programs 
+for parents. 
+
+•  brave4you.psy.uq.edu.au 
+
+eCentreClinic 
+
+Develops and tests treatment courses for people with symptoms of worry, anxiety 
+(including OCD and PTSD), stress, depression, low mood, chronic pain and 
+epilepsy. Includes courses for adults and older adults. Courses are usually about 
+5-6 lessons. Some programs are self-guided and some have therapist support. 
+
+•  ecentreclinic.org   
+
+Mental Health Online(formerly Anxiety Online) 
+
+Provides information, symptom feedback through the e-PASS assessment 
+program, publicly available treatment programs (GAD, Social Anxiety, Panic 
+Disorder, OCD, PTSD) and opportunities to participate in new programs through 
+research trials. Treatment programs can be accessed as self-help for free or with 
+therapist support for a small fee. 
+
+•  anxietyonline.org.au 
+
+OCD? Not Me! 
+
+For young people aged 12-18 years with Obsessive Compulsive Disorder. It 
+involves 8 stages and provides information, tips, activities, and support to help 
+users to overcome the symptoms of OCD. The program also provides support for 
+parents and caregivers. 
+
+•  ocdnotme.com.au 
+
+26 
+
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+THIS WAY UP™(Crufad) 
+
+Provides courses with in-house clinician support for a small fee to people with a 
+special code from their clinician. Also provides free self-help and a range of 
+professional education and schools courses. 
+
+•  thiswayup.org.au 
+
+27 
+
+ 
+Appendix B: Practice Materials 
+
+1. Sample stories from Stay Strong Plans 
+
+Anna’s story 
+
+My Aunty Cathy and my great grandmother Jessie and my daughter Alice help 
+keep me strong… My Aunty teaches us culture and we talk about my life and she 
+tells me what’s right and what’s good. I want to learn more about culture so I can 
+speak more (traditional language) and pass it on to the kids. Sometimes I get 
+unhappy, I drink too much and sometimes I get angry and violent. I want to 
+change that. 
+
+I want to sit down with that old man (grandfather) every afternoon and talk 
+(traditional) language and speak old language and understand culture and 
+corroboree that they dance all day. Good things about these changes are that I 
+can speak more language, pass it onto (my) kids, and understand when they sing 
+(in ceremony).  
+
+(25 year old mother of two) 
+
+Robbie’s Story 
+
+What keeps me strong is our Aboriginal ceremonies and painting and the art 
+centre, hunting, fishing and music. 
+
+Things which take my strength away, are worry about being violent, family 
+worries, physical health, smoking cigarettes, not knowing about mental illness.  
+Trouble with mood swings, high mood and energy, thoughts of self-harm and 
+suicide. 
+
+Michael, Ian, Katie-Jean and Carly help keep me strong. 
+
+Strong changes I want to make are to go hunting more and to have bush tucker.  
+To have less family humbug and to work at the art centre.  
+
+I want to talk to Carly and Katie-Jean and Ian, and I want to talk to my dad so 
+that we can go bush together more.  
+
+I want to talk Nick about the art centre so that I can stretch canvases and to talk 
+to Centrelink too to check working casual hours.  
+
+And I want to stop fighting so much with my brothers about Money I want to stop 
+borrowing and lending and keep my money in the bank. 
+
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+2. AIMHi  Stay  Strong  App  Motivational  Care 
+
+Planning - Adherence Scale 
+
+Phuong Prowse, Tricia Nagel 
+
+The AIMhi Stay Strong App Adherence Scale is used to observe the practice of 
+applying the 4 step Stay Strong Plan. The Adherence scale helps to monitor a 
+range of factors that support the success of the motivational care plan, and to 
+build skills and confidence when using the resource in practice.  
+
+THERAPIST: 
+
+DATE OF RATING: 
+
+INDIVIDUAL/GROUP SESSION: 
+
+TREATMENT SETTING: 
+
+ASSISTANT RATER: 
+
+TOTAL SCORE: 
+
+INSTRUCTIONS TO RATERS: 
+
+1.  RATE  EACH  ITEM:    This  scale  is  designed  so  that  each  item  can  be 
+
+rated on a scale from one to nine.  Do not leave any items blank. 
+
+2.  READ EVERY ITEM: It is recommended that you read each item entirely 
+every  time  it  is rated.   It  is also  useful to  be  completely  familiar with  the 
+information in the examples for each item before rating it and to continue 
+to  refer  to  these  examples  in  order  to  prevent  subsequent  rater  ‘drift’ 
+(moving away from the accurate definition of the item). 
+
+3.  REVIEW NOTES:  We recommend that the rater review notes from their 
+sessions with clients using the Stay Strong App before completing the self 
+assessment.  This  will  enhance  the  accuracy  of  ratings  because  it  helps 
+remind raters of information that is relevant to rating the items. 
+
+4.  COMPLETE your rating taking into account all of the client sessions you 
+have  delivered  using  the  Stay  Strong  App.  Take  into  consideration  how 
+frequently  and  how  successfully  (with  good  effect  within  the  session) 
+you fulfilled the objective of each item in your rating.  
+
+5.  PLEASE  PROVIDE  YOUR  RATING  BY  TICKING  OR  CIRCLING  YOUR 
+DESIRED RESPONSE ON THE RATING FORM THAT IS PROVIDED. 
+
+29 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+GUIDELINES FOR RATING ITEMS 
+
+1. 
+
+ENGAGEMENT 
+
+To what extent do you as the therapist (usually and regularly) seek to establish a 
+trusting relationship with your client at commencement and throughout treatment 
+through: discussion of country; sharing where you are from; explanation of your 
+in  common;  avoidance  of  direct  eye 
+role;  discussion  of 
+contact/direct  questions  as  appropriate;  use  of  plain  English  as  appropriate; 
+and/or reinforcement of the achievements of your client? 
+
+relationships 
+
+1 
+
+2 
+
+3 
+
+4 
+
+5 
+
+6 
+
+7 
+
+8 
+
+9 
+
+       Not at all 
+
+                Some  
+             of the time 
+
+                              All of the time 
+
+A  full  rating  of  9  would  require  that  use  of  the  strategies  outlined  below  (where 
+applicable for a  given  client) is a  regular and  successful aspect of  your therapy 
+(evidence of success would include strengthened rapport and client engagement 
+and interest throughout the session): 
+
+•  Discussion of country and of where you are from (1) 
+•  Explanation of your role (1) 
+•  Discussion of relationships, people in your life, people you know in common 
+
+(1) 
+
+•  Avoidance of direct eye contact/direct questions as appropriate (1)2 
+•  Using plain English/speaking slowly as appropriate (1) 
+•  Reinforcement of previous achievements or reminders of positive changes 
+
+(1) 
+
+If one  item  is usually  included then the  scoring  would  be  “6”.  If  two  items  are 
+usually  included  then  the  scoring  would  be  ‘7’  if  three  items  are  usually 
+included  the  scoring  would  be  “8” and  if  four  items  are  regularly  included  the 
+score would be “9”. 
+
+2. 
+
+FAMILY: 
+
+To  what  extent  do  you  as  the  therapist  usually  and  regularly  explore  with  the 
+client the important people in the client’s life that keep them strong, or that they 
+care for and need to stay well for (e.g. children)?  
+
+2 Eye contact and direct questioning can be experienced as challenging or intrusive in some cross cultural 
+settings   
+
+30 
+
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+                                                 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+1 
+
+2 
+
+3 
+
+4 
+
+5 
+
+6 
+
+7 
+
+8 
+
+9 
+
+       Not at all 
+
+                Some  
+             of the time 
+
+                              All of the time 
+
+The purpose of this item is to assess whether the therapist behaviour 
+successfully explores the client’s family members and friends (past and present) 
+that assist them to stay well or to want to be well. If the exploration of 
+relationships is brief and cursory then a score of 5 is given. If exploration of 
+patient/client key family members in detail (including relationship and role) is a 
+regular and successful aspect of your therapy then a score of “9” is given. Score 
+yourself between 5 and 9 according to the degree to which you believe you 
+explore relationships in depth and with success. Success would be indicated by 
+gaining detailed information while maintaining rapport and keeping within 
+reasonable time frames for your setting. 
+
+3. 
+
+STRENGTHS 
+
+To  what  extent  do  you  as  the  therapist  explore  client  strengths  using  the  care 
+plan  using  a  simple  visual  metaphor  (e.g.  the  tree)  to  explain  the  interaction 
+between strengths and worries and their effect on our wellbeing? 
+
+1 
+
+2 
+
+3 
+
+4 
+
+5 
+
+6 
+
+7 
+
+8 
+
+9 
+
+       Not at all 
+
+                Some  
+             of the time 
+
+                              All of the time 
+
+The  purpose  of  this  item  is  to  assess  whether  the  therapist  explores  strengths 
+and positive activities in each of four areas (spiritual and cultural; physical; family, 
+social  and  work;  and  mental  and  emotional)  using  a  simple  visual  metaphor  to 
+explain the link between wellbeing and strengths. If exploration of client strengths 
+is  a  regular  and  successful  aspect  of  your  therapy  a  rating  of  “6”  is  given.  For 
+each  of  the  below  items  that  you  regularly  and  successfully  address  in  therapy 
+one  mark  on  top  of  the  “six”  is  given.  If  you  as  the  therapist  (regularly  and 
+successfully) include all of the below items in your client sessions then a rating of 
+“9”  is  given.    Success  would  be  indicated  by  evidence  that  your  client 
+understands  these  concepts,  shares  their  information,  and  actively  engages  in 
+this aspect of the session. 
+
+•  Using  metaphor  (e.g  the  tree)  to  discuss  social  and  emotional  wellbeing 
+
+(1)  
+
+•  Prioritising strengths through noting which are ‘really important’ (1)  
+
+31 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+•  Checking, exploring and validating client responses (1)  
+
+4. 
+
+STRESSORS/ WORRIES 
+
+To what extent do you as the therapist explore client stressors and worries using 
+a  simple  visual  metaphor  (e.g.  the  tree)  to  explain  the  interaction  between 
+strengths and worries and their effect on our wellbeing? 
+
+1 
+
+2 
+
+3 
+
+4 
+
+5 
+
+6 
+
+7 
+
+8 
+
+9 
+
+       Not at all 
+
+                Some  
+             of the time 
+
+                              All of the time 
+
+The  purpose  of  this  item  is  to  assess  whether  the  therapist  explores  client 
+stressors  and  worries  and  uses  a  simple  visual  metaphor  to  explain  the  link 
+between wellbeing and stressors. If exploration of client worries and stressors is 
+a regular and successful aspect of your therapy a rating of “6” is given. For each 
+of  the  below  items  that  you  regularly  and  successfully  address  in  therapy  one 
+mark on top of the “six” is given. If you as the therapist regularly and successfully 
+include all of the below items in your client sessions then a rating of “9” is given.  
+Success  would  be  indicated  by  evidence  that  your  client  understands  these 
+concepts,  shares  their  information,  and  actively  engages  in  this  aspect  of  the 
+session. 
+
+•  Using  metaphor  (e.g  the  tree)  to  explain/discuss  social  and  emotional 
+
+wellbeing (1)  
+
+•  Prioritising worries through noting which are ‘really important’ (1)  
+•  Checking, exploring and validating client responses (1)  
+
+5. 
+
+GOAL SETTING: 
+
+To what extent do you as the therapist help the client to choose their own goals 
+and steps towards change?  
+
+1 
+
+2 
+
+3 
+
+4 
+
+5 
+
+6 
+
+7 
+
+8 
+
+9 
+
+       Not at all 
+
+                Some  
+             of the time 
+
+                              All of the time 
+
+For the purpose of this item the therapist must link the information about family, 
+strengths and stressors to a plan for change (a goal). In addition, exploration of 
+reasons  for  change  (“what  are  the  good  things  about  change?  why  is  it  really 
+important for you  to make  change?”)  is needed.    After establishment of at  least 
+one  goal,  the  steps  to  change  need  to  include  details  of  how  (the  goal  will  be 
+achieved)(1),  what  (will  be  done)(1)  when  (it  will  be  done)(1)  and  who  (can 
+
+32 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+assist in reaching that goal/step)(1). These steps are summarised below: 
+
+•  Linking information about family, strengths and stressors with goal setting 
+
+(1) 
+
+•  Exploring reasons for change and/or past successes (1) 
+•  Supporting choice of practical achievable and meaningful goals and steps 
+
+(1) 
+
+•  Assist to identify practical (what, who, when) steps toward each goal (1) 
+•  Using metaphor (e.g. kicking a goal) to explain/discuss goal setting (1) 
+
+The degree of detail of the goal setting is important in the scoring for this item. If 
+you  usually,  regularly  and  successfully  develop at  least  one  goal and two  steps 
+with  each  client  then a  score of 5  is given.  If  you  as the  therapist  regularly  and 
+successfully include at least four of the above items in your client sessions then a 
+rating  of  “9”  is  given.  (Success  would  be  indicated  by  your  confidence  that  the 
+goals and steps are achievable for your client).   
+For  each  of  the  above  items  that  you  usually  and  regularly  address  in  therapy 
+one mark is given on top of the “five” given and a rating of between “5” and “9” is 
+given.  
+
+USE OF THE SUMMARY FUNCTIONS TO ASSIST MOTIVATION 
+
+To what extent do you as the therapist regularly use the summary pages within 
+the  App  or  the  email  summary  (or  another summary  approach)  to  support  your 
+client to achieve the steps and goals that they are aiming for between sessions?  
+
+1 
+
+2 
+
+3 
+
+4 
+
+5 
+
+6 
+
+7 
+
+8 
+
+9 
+
+       Not at all 
+
+                Some  
+             of the time 
+
+                              All of the time 
+
+If the summary page is regularly reviewed with clients during the session then a 
+score of  “6” is given. Other  options for  use of the  summary  page and  the  email 
+text summary are: 
+
+•  Copy given to client (hard copy or email) (1) 
+•  Copy placed in client file (in hard copy or electronic file) (1) 
+•  Summary reviewed at follow up (1) 
+•  Other use (e.g text message follow up) (1) 
+
+For  each  of  the  above  items  that  are  a  regular  component  of  your  therapy  one 
+mark  is  given  on  top  of  the  “6”  given.  If  at  least  three  of  the  above  options  are 
+rated. 
+included 
+
+score 
+
+then 
+
+“9” 
+
+of 
+
+is 
+
+a 
+
+33 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+3. Goal Setting Activities 
+
+This is the most complex section of motivational care planning and also the most 
+challenging section of the APP. 
+The FIRST goal has 3 potential steps toward it – identified by the first thing you can 
+do to reach this goal, what else you can do to reach this goal and another thing you 
+can do to reach this goal. Each of these steps includes prompts for what you will do, 
+who will help and when you will do it. 
+
+Goal Setting Activity during Training 
+
+Scenario 1 
+
+Carol is a 22 year old woman from a remote community who presents in town for 
+treatment of her alcohol problem. She has domestic violence assault charges (she 
+argued with a niece) and has two children (Joe and Lisa) aged 2 and 4 in care with 
+child protection services. She has supportive family on her community and was 
+recently employed at the child care centre which she enjoyed. Her Auntie May and 
+her Mother Peggie are strong supporters of her who have looked after her children in 
+the past. Her current boyfriend is now in jail and is the father of one of the children. 
+She values her link with her country and her language and enjoys going out bush 
+and collecting bush tucker. She is lonely. 
+
+Goal: be less lonely - contact children and contact home community 
+
+Step One:  
+
+1.  What? Arrange a visit or phone call with the children  
+2.  Who? Contact child protection  
+3.  When? Today 
+
+Step Two: 
+
+1.  What? Look at photos 
+2.  Who? Ask family and child protection for help with finding photos  
+3.  When? Today 
+
+Step Three 
+
+1.  What? Make a phone call or use facetime or face book or skype to talk to 
+
+family at home 
+
+2.  Who? Ask wellbeing worker for help 
+3.  When? Talk with wellbeing worker today 
+
+Goal: manage anger better by more relaxation 
+
+Step One 
+
+1.  What? Start a fitness program – walk every day 
+2.  Who? Aunty will help/will walk with me 
+3.  When? Talk with Aunty today 
+
+Scenario 2 
+Brendan is a 25 year old man has thoughts of self harm, worries about alcohol use 
+and feelings of sadness. He lives locally in Darwin. His key strengths are music and 
+art work and his engagement with Larrakiah nation activities. He also has family in 
+Darwin (mother Anna, uncle Jeff and two children Lea and Johnnie). He is separated 
+from the mother of his children and does not see them often.  
+
+34 
+
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Goal: cut down grog (stay stopped) 
+
+Step One 
+
+1.  What? Avoid drinking mates and family 
+2.  Who? Mum will help/will remind me 
+3.  When? Talk with Mum today 
+
+Step Two 
+
+1.  What? Do more art at Larrakiah nation 
+2.  Who? Uncle will help 
+3.  When? Talk with Uncle today 
+
+Step Three 
+
+1.  What? Do more exercise/get fit again 
+2.  Who? Mate will help – 
+3.  When? Go jogging during the week after 5 pm 
+
+Scenario 3 
+Tom is a 48 year old man is thinking of seeking treatment for his cannabis and 
+alcohol problem. He feels like he is not getting anywhere in his life. He does not have 
+a job and relies on Centrelink payments. He is living with his brother Ian and borrows 
+from his employed brother every week. They have arguments about money and 
+cigarettes and gunja. He enjoys fishing and camping and going out bush with family 
+(nephew Ronnie and Uncle Jim).  
+
+Goal: to have fewer arguments 
+
+Step One 
+
+1.  What?  Talk to social and emotional wellbeing worker about treatment for 
+
+alcohol and drug use 
+
+2.  Who? Mate and brother will help  
+3.  When? Talk to mate and brother tomorrow 
+
+Step Two 
+
+1.  What?  Spend more time out bush/fishing/feeling calmer 
+2.  Who? Nephew will help  
+3.  When? Talk to nephew and brother tomorrow 
+
+Step Three 
+
+1.  What?  Find out about a part time job out bush 
+2.  Who? Brother and Centrelink will help  
+3.  When? Talk to brother about going to Centrelink tomorrow 
+
+Goal: to cut down cannabis 
+
+Step One 
+
+1.  What?  Avoid friends and mates who smoke by going for a walk in the 
+
+morning when they come round 
+
+2.  Who? Best mate will help (as he does not smoke) 
+3.  When? In the mornings 
+
+Step Two 
+
+1.  What?  Spend money on food first before grog and cannabis 
+2.  Who? Brother will help  
+3.  When? Pay day 
+
+35 
+
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Goal Setting Practice ONE 
+
+Case 1. 
+John is a 22 year old man supported by his brother and a good mate. He says that 
+his strengths are – ‘family’ and ‘going to country’. His main worries are – ‘gunja’ and 
+‘fast food’ and ‘feeling sad’. 
+He chooses a goal for more exercise because his mate plays footy and he admires 
+him and he wants to feel healthier and good about himself 
+The steps you discuss together are for him to join the local team and start footy 
+training again and to talk with the coach about this plan this weekend) his mate can 
+help here) and he also thinks that telling his brother will be useful as they can go to 
+training together (Tuesday nights).A third step to the more exercise goal is to go 
+running after work with his brother three times a week 
+His second goal is to cut back gunja, his mate can support him. He says the first 
+thing he needs to do is to make up his mind, and decides to talk to his brother 
+(today). for support, say no to mates who ask him to smoke and avoid them by not 
+going to the usual house that they smoke at every day 
+
+Task 1 
+Using the above case scenario fill in the goals section. You have information for two 
+goals and 3 steps. See how you go at completing the goals section of the APP using 
+the above information. 
+
+Goal setting Practice TWO 
+
+Remembering SMART goals, fill in the steps on the APP for the following goals 
+chosen by a 17 year old female year 11 student with strengths in music and family 
+and worries including anxiety and drinking alcohol on weekends (imagine/ be 
+creative about what your young client might volunteer as steps) and why the goals 
+would be good (tip - check out the tips page). 
+
+Task 2 
+Fill in the steps on the APP for the following goals 
+Goal one: more focus on school work 
+Goal two: learn to relax more 
+
+36 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+Answer sheet for goal setting practice  
+Yours can be somewhat different but here is one set of answers: 
+Case 1.  
+Goal one: More exercise 
+Step one:  
+
+1.  Talk to coach of the local team about joining up 
+2.  Mate can help 
+3.  This weekend 
+
+Step two:  
+
+1.  Start training with the club 
+2.  Brother can help 
+3.  Tuesday training nights 
+
+Step three:  
+
+1.  Start running again 
+2.  Brother can help 
+3.  Run after work three times a week 
+
+Goal two: Smoke less gunja 
+Step one:  
+
+•  Make up my mind 
+•  Brother can help 
+•  Talk to brother today 
+
+Step two:  
+
+1.  Say no and avoid mates 
+2.  Brother to help 
+3.  Try to avoid every day 
+
+Case 2.  
+Example steps might be 
+Goal one: more focus on school work 
+Step One:  
+
+1.  Write a study plan for each subject 
+2.  Talk to the teacher and/or Mum 
+3.  Make these changes this week 
+
+Step two: 
+
+1.  Stop going out during the week 
+2.  Talk with mum and best friend 
+3.  Starting this week 
+
+Goal two: Learn to relax more  
+Step one: 
+
+1.  Find out more about relaxation 
+2.  School counsellor can help 
+3.  Start this weekend 
+
+Step two:  
+
+1.  Look on the internet for relaxation ideas 
+2.  Best friend can help 
+3.  Start this week 
+
+37 
+
+ 
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+4. Example App Script 
+
+Introducing the App 
+
+“There are many different ways in which we keep strong in our lives. Spiritual, 
+physical, family, work and emotional strengths help keep us in balance –like strong 
+roots of a tree. When we are in balance we grow strong.  
+
+Our mental health/wellbeing is like a tree, which needs to be fed. When there are 
+strong roots feeding those parts of our lives a strong tree can grow. If the roots get 
+dry and aren’t fed properly –the tree might get weak.  
+
+We need to keep in balance by making choices that add strength to our lives in all 
+areas- spiritual, physical, family, work and emotional. Worries and stress and trouble 
+can take away our balance. Making changes for strength in some or all of these 
+aspects of our lives can help us find balance again 
+
+This app helps us to look at what keeps us strong and what might take away our 
+strength and then make some plans for finding balance again.  Do you want to try it 
+out together?”  
+
+[client responds] 
+
+Beginning with the App 
+
+“So this is going to be your story, so let’s put in your name… And the year you were 
+you born? What we talk about today stays between us, I will not share it with anyone 
+unless you are ok with me doing so or if another staff member is working with you 
+later on I might share it with them….3 But if you agree, some of the information we 
+put into the app can be collected by the app developers to help them make the 
+program better. They will not collect your name so no one will know it is your 
+information. So this button here is asking if the developers/Menzies can collect some 
+of the information we put into the App for e.g. how long we spend on each page.  Is 
+that ok if we send that anonymous information to the developers or would you rather 
+not?”  
+
+[client responds] 
+
+“Ok so we’ll keep that one ticked. So because this is your story, if you like, we can 
+put in a photo of you?”  
+
+[take client photo] 
+
+“And, There are two options here male or female which would we push for you?”  
+
+[Client responds] 
+
+People who keep me strong page 
+
+And there you are in the centre. One of the important ways in which we can stay 
+strong and have balance in our lives is to have strong people around us who help to 
+keep us feeling okay during the tough times. This is your family map, and this is you 
+
+3 Sometimes our clients will reveal information that requires mandated reporting or requires that we share it 
+with others due to our duty of care to others or to the client themselves. Each service will have its own 
+guidelines for how and when to indicate to clients that such information needs to be shared and can no longer be 
+kept confidential. We recommend that this issue and your preferred process is clarified before you use the APP 
+for the first time with a client. 
+
+38 
+
+ 
+                                                 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+in the centre. Who would you put around you on your family map? Who is it that 
+helps to keep you strong and in balance? 
+
+ [Client talks about family] 
+
+“And thinking about who else would be important for you… who else should we put 
+in here?” 
+
+[Client talks about family] 
+
+“Ok we can also come back to that page if you think of someone else.”  
+
+Stay Strong Tree 
+
+“Ok so there are good people in our lives that help us through tough times, but there 
+are also things we do that help us grow strong like a tree.  So, looking at this 
+tree…what sorts of things in your life – spiritual, physical, social or mental and 
+emotional help to keep you strong? Do any of these things here fit for you?” 
+
+[client talks about their strengths] 
+
+Some prompts 
+
+• 
+• 
+• 
+
+“Do you want to tell me a little bit more about that?”  
+“What is important about that?”  
+“In what way?” 
+
+Worries page 
+
+“Ok so you’ve got some good strengths there but sometimes we can have some 
+worries too or some tough times in our lives…this page is about how those tough 
+times sometimes drains our strength and the tree of our mental health might struggle 
+a bit. What sorts of things would be important to put in here for you?  What takes 
+your strength away?” 
+
+ [Client talks about worries] 
+
+Some prompts  
+
+• 
+• 
+
+“Would you like to tell me a little bit more about that?” 
+“In what way?” 
+
+[Client talks about worries] 
+
+Goal setting page 
+
+“Ok, so thinking about the people in your life who keep you strong and thinking about 
+the good things that you do and that you value and then thinking about your worries, 
+what would be one small thing that you might think about changing to help with those 
+worries? Remember, anyone can make changes when they are ready, there are lots 
+of different steps to change, small steps can lead to big changes.” 
+
+“What would be the most important thing to change right now?  We can make that 
+your first goal?” 
+
+[Client talks about goals]  
+
+“And why do you want to make that change, Why would it be a good thing to do?”  
+
+[Client responds] 
+
+ “What could be the first thing that you could do to begin to make that change?” 
+
+39 
+
+ 
+AIMhi Stay Strong Planning: Brief Treatment Manual 
+
+[Client responds] 
+
+“And when do you want to do that?” 
+
+[Client responds] 
+
+“And who might help you with that?” 
+
+Summarise Step – e.g. “so this afternoon after work, you will pick up the kids and 
+then go to Bunnings to get your supplies for the new garden. Great”.   
+
+“So what else might you do to help meet your goal of …?” 
+
+ [Talk about another step] 
+
+“Ok so you’ve set some really good goals there.   On this page, there are a few tips 
+that other people have used to help them with making changes. Do any of these 
+seem useful in helping with any of the changes you’d like to make?” 
+
+[client looks and selects tips] 
+
+“Ok so before you go I’d like to show you a summary of everything we’ve talked 
+about today.”  
+
+[Show pictorial summary] 
+
+“These are the people who keep you strong, and maybe the people who will help you 
+in tough times or help you with your goals.   
+
+This is your tree.  It shows you that you have lots of strengths in this area of your life, 
+but also some worries here. And so thinking about those strengths and worries, 
+these are the goals you have set for making some changes in your life.”  
+
+[Review goals] 
+
+“These are your tips here”. [Review tips] 
+
+“So I’ll email this to myself and print out a copy for you to take with you and before 
+we do that, let’s make another time to catch up again and see how you went with 
+those goals. Ok?” 
+
+[Make a time with client and then email text summary to self/client]. 
+
+40 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

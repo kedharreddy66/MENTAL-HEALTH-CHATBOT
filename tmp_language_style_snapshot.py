@@ -1,6 +1,6 @@
 ﻿from typing import Dict, Tuple
 
-LEGACY_TONE = {
+STANDARD_TONE = {
     "greeting": "Hey, I'm here to listen. What's on your mind today?",
     "bridge_family": (
         "Before we get into worries, let's start with the strong people around you. "
@@ -282,8 +282,8 @@ def render_normal_reply(state: Dict, last_user_text: str) -> str:
         if _is_worry_signal(text):
             state["stay_strong_step"] = 3
             return (
-                "Thank you for telling me how you are feeling. I am here. "
-                "Can you share a bit about what has been making you feel this way? "
+                "Thanks for telling me how you're feeling. I'm here. "
+                "Can you share a bit about what's been making you feel this way? "
                 + STANDARD_TONE["invite_worries"]
             )
         state["stay_strong_step"] = 2
@@ -334,8 +334,8 @@ def render_normal_reply(state: Dict, last_user_text: str) -> str:
 
     if text_raw:
         return (
-            f"Thank you for telling me about \"{text_raw}\". "
-            "What is one small thing you could do this week to feel a bit stronger about that?"
+            f"Thanks for telling me about \"{text_raw}\". "
+            "What's one small thing you could do this week to feel a bit stronger about that?"
         )
 
     return STANDARD_TONE["goals_intro"]

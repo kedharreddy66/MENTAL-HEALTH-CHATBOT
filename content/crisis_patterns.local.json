@@ -1,0 +1,12 @@
+[
+  "\\bkill\\s*my\\s*self\\b",
+  "\\bkill\\s*myself\\b",
+  "\\bkill\\s*me\\b",
+  "\\btake\\s*my\\s*life\\b",
+  "\\bend(?:ing)?\\s*(?:it|my\\s*life)\\b",
+  "\\bi\\s*(?:want|wanna|feel like)\\s*(?:to\\s*)?(?:die|not\\s*be\\s*alive)\\b",
+  "\\bi\\s*(?:do?n'?t)\\s*want\\s*to\\s*live\\b",
+  "\\bself[-\\s]*harm\\b",
+  "\\bcut(?:ting)?\\s*myself\\b",
+  "\\bkys\\b"
+]
