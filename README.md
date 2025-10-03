@@ -160,3 +160,69 @@ This project is currently unlicensed. Please contact the repository owner for li
   git rm -r --cached .venv conda-env **/__pycache__
   git commit -m "Clean tracked env/cache files"
   ```
+
+---
+
+## Deploy with ngrok (easy sharing)
+
+Use ngrok to expose your local server to the internet so others can visit your chatbot.
+
+Prereqs
+- Install Python deps: `pip install fastapi uvicorn pydantic numpy`
+- Install ngrok and set your authtoken (create a free account):
+  - Download: https://ngrok.com/download
+  - Auth: `ngrok config add-authtoken <YOUR_TOKEN>`
+
+Quick start
+- Start the API (bind on all interfaces):
+  - `uvicorn src.mh_core.api:app --host 0.0.0.0 --port 8765`
+- In a second terminal, start ngrok:
+  - `ngrok http 8765`
+- Copy the `https://` URL that ngrok prints and share it. Visiting it serves `/chat.html` and the UI calls the same origin.
+
+Convenience script (Windows/PowerShell)
+- Run: `powershell -ExecutionPolicy Bypass -File scripts/serve_ngrok.ps1 -AuthToken <YOUR_TOKEN>`
+  - Starts Uvicorn on `0.0.0.0:8765` (if not already running)
+  - Starts ngrok and prints the public URL by querying the local ngrok API
+  - Omit `-AuthToken` if already configured.
+
+Notes
+- CORS is open in dev; production should restrict origins.
+- The front-end auto-detects its origin (updated `chat.html`), so it works over tunnels and LAN.
+- To stop: close the terminals (Uvicorn and ngrok) or kill the processes.
+
+---
+
+## Quick Start (Installation)
+
+Windows (PowerShell)
+- Ensure Python 3.11+ is installed: `python --version`
+- Clone and enter the repo:
+  - `git clone https://github.com/kedharreddy66/MENTAL-HEALTH-CHATBOT.git`
+  - `cd MENTAL-HEALTH-CHATBOT`
+- Create and activate a virtual environment:
+  - `python -m venv .venv`
+  - `./.venv/Scripts/Activate.ps1`
+- Install deps: `pip install fastapi uvicorn pydantic numpy`
+- Optional (build retrieval index): `python scripts/build_index.py`
+- Run the API: `uvicorn src.mh_core.api:app --reload`
+- Open the UI: open `chat.html` in your browser.
+
+macOS/Linux (bash/zsh)
+- Python 3.11+ installed: `python3 --version`
+- Clone and enter:
+  - `git clone https://github.com/kedharreddy66/MENTAL-HEALTH-CHATBOT.git`
+  - `cd MENTAL-HEALTH-CHATBOT`
+- Create and activate venv:
+  - `python3 -m venv .venv`
+  - `source .venv/bin/activate`
+- Install deps: `pip install fastapi uvicorn pydantic numpy`
+- Optional index: `python3 scripts/build_index.py`
+- Run the API: `uvicorn src.mh_core.api:app --reload`
+- Open the UI: open `chat.html` in your browser.
+
+Optional configuration
+- `FAST_MODE=true|false` (default `true` for speed)
+- `PLAIN_ENGLISH_MODE=true|false` (default `true`)
+- `OLLAMA_HOST`, `OLLAMA_PORT`, `OLLAMA_MODEL`, `OLLAMA_NUM_THREADS`
+- PowerShell example: `$env:FAST_MODE='true'`; bash example: `export FAST_MODE=true`
