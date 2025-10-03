@@ -193,6 +193,23 @@ Notes
 
 ---
 
+## Requirements
+
+- Python: 3.11 or newer
+- OS: Windows, macOS, or Linux
+- Git: to clone the repository
+- Runtime Python packages:
+  - `fastapi`, `uvicorn`, `pydantic`, `numpy`
+- Optional tools:
+  - Ollama (for local LLM): runs on `127.0.0.1:11434` and a model such as `llama3.2:3b-instruct-q4_K_M`
+  - ngrok (for easy sharing over the internet)
+- Optional Python packages:
+  - `pdfminer.six` (script support)
+  - Dev tools: `pytest`, `ruff`, `mypy`
+- Ports used: API (`8000` by default), Ollama (`11434` by default)
+
+---
+
 ## Quick Start (Installation)
 
 Windows (PowerShell)
