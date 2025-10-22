@@ -16,20 +16,41 @@ from pathlib import Path
 # Default to enabled in production; can opt-out via env
 _DEV_BYPASS = os.getenv("DEV_BYPASS_CRISIS", "false").lower() in ("1", "true", "yes")
 
+# Human-readable support text used by tests and for UIs that want a
+# single block of helpline info. Keep numbers in plain format.
+SUPPORT_TEXT = (
+    "If you are in immediate danger, call 000 (Australia) or 112 from a mobile. "
+    "13YARN: 13 92 76. Lifeline: 13 11 14. Kids Helpline: 1800 551 800. "
+    "Suicide Call Back: 1300 659 467. Beyond Blue: 1300 22 4636."
+)
+
 _CRISIS_TERMS = [
     r"\bsuicide\b", r"\bsuicidal\b", r"\bend it\b", r"\bend my life\b",
-    r"\bkill myself\b", r"\bkill me\b", r"\bi want to die\b", r"\bi wanna die\b",
+    r"\bkill myself\b", r"\bkilling myself\b", r"\bi want to die\b", r"\bi wanna die\b",
     r"\bi want to end it\b", r"\bending it\b", r"\bi can'?t go on\b",
     r"\bno reason to live\b", r"\bself[- ]?harm\b", r"\bhurt myself\b",
-    r"\bnot safe\b", r"\bcan'?t stay safe\b", r"\bgive up\b"
+    r"\bnot safe\b", r"\bcan'?t stay safe\b", r"\bgive up\b",
+    r"\bsomeone\s+kill\s+me\b", r"\bplease\s+kill\s+me\b"
 ]
 _CRISIS_RE = re.compile("|".join(_CRISIS_TERMS), re.IGNORECASE)
+
+
+_IDIOM_NON_CRISIS_RE = re.compile(
+    # Common hyperbolic expressions like "my mum is going to kill me", "this is killing me"
+    r"(\b(is|are|was|were|\'s|going to|gonna)\s+killing me\b)"
+    r"|\b(going to|gonna)\s+kill me\b"
+    r"|\b(my\s+(mum|mom|dad|parents)|teacher|boss|coach|this|that|it|homework|assignment|work|back)\s+(is|are|was|were|\'s)\s+(going to\s+)?killing? me\b",
+    re.IGNORECASE,
+)
 
 def contains_crisis_signal(text: str) -> bool:
     """Return False in dev mode; otherwise regex-detect common crisis terms."""
     if _DEV_BYPASS:
         return False
     if not text:
+        return False
+    # Guard: ignore common non-literal idioms like "my mum is going to kill me" / "this is killing me"
+    if _IDIOM_NON_CRISIS_RE.search(text or ""):
         return False
     match = _CRISIS_RE.search(text)
     if match:

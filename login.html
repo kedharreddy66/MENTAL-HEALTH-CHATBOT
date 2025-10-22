@@ -1,0 +1,524 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MH Chatbot — Login</title>
+  <meta name="color-scheme" content="light" />
+  <style>
+    :root{
+      --primary: 16 82% 58%;      /* terracotta */
+      --secondary: 178 42% 52%;   /* calming teal */
+      --background: 28 25% 97%;
+      --foreground: 20 14% 15%;
+      --muted: 30 20% 90%;
+      --border: 30 15% 85%;
+      --radius: 12px; /* 0.75rem */
+    }
+    *{ box-sizing:border-box }
+    html, body { height:100% }
+    body{
+      margin:0;
+      color:hsl(var(--foreground));
+      background:hsl(var(--background));
+      font:16px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    /* Background with warm gradient + subtle pattern */
+    .bg{
+      position:fixed; inset:0; z-index:-1;
+      background:
+        radial-gradient(1200px 600px at 10% 0%, hsla(var(--primary)/.18), transparent 60%),
+        radial-gradient(1000px 600px at 90% 100%, hsla(var(--secondary)/.16), transparent 60%),
+        linear-gradient(135deg, hsla(var(--primary)/.12) 0%, hsla(28 30% 92%/.6) 30%, hsla(var(--background)/1) 70%);
+    }
+    .pattern{
+      position:absolute; inset:0; pointer-events:none; opacity:.22; mix-blend-mode:multiply;
+      background:
+        radial-gradient(circle at 8% 18%, rgba(0,0,0,.04) 2px, transparent 3px) 0 0/48px 48px,
+        radial-gradient(circle at 60% 70%, rgba(0,0,0,.035) 2px, transparent 3px) 0 0/42px 42px,
+        conic-gradient(from 90deg at 70% 10%, hsla(var(--secondary)/.06), transparent 40%)
+      ;
+    }
+
+    .wrap{ min-height:100svh; display:grid; place-items:center; padding:24px }
+    .card{
+      width:min(860px, 94vw);
+      background:hsla(0 0% 100% / .50);
+      border:1px solid hsl(var(--border));
+      border-radius:var(--radius);
+      box-shadow:0 20px 80px hsla(var(--primary)/.25), 0 2px 0 hsla(0 0% 100%/.6) inset;
+      backdrop-filter:saturate(1.2) blur(14px);
+      -webkit-backdrop-filter:saturate(1.2) blur(14px);
+      overflow:hidden;
+      animation:fade-in .5s ease-out both;
+    }
+    .card-body{ display:grid; gap:18px; padding:22px; grid-template-columns:1fr }
+    @media (min-width: 900px){ .card-body{ grid-template-columns: 1.1fr 1fr } }
+    .left{ padding:10px 16px 22px 16px }
+    .hero{
+      border-left:1px solid hsl(var(--border));
+      background:
+        radial-gradient(600px 360px at 70% -10%, hsla(var(--primary)/.35), transparent 60%),
+        radial-gradient(500px 320px at 20% 110%, hsla(var(--secondary)/.35), transparent 60%),
+        linear-gradient(180deg, hsla(0 0% 100%/.35), hsla(0 0% 100%/.2));
+      position:relative; display:none
+    }
+    @media (min-width: 900px){ .hero{ display:block } }
+    .hero::after{ content:""; position:absolute; inset:0; opacity:.5; background: radial-gradient(800px 400px at 70% -10%, hsla(var(--primary)/.35), transparent 60%), radial-gradient(700px 360px at 20% 110%, hsla(var(--secondary)/.35), transparent 60%); filter:saturate(1) contrast(1.02) }
+
+    .title{
+      background:linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      font-weight:900; letter-spacing:.2px; font-size:clamp(26px, 4vw, 40px); line-height:1.1; margin:10px 0 4px
+    }
+    .subtitle{ color:hsl(var(--foreground) / .7); margin:0 0 6px 0 }
+
+    /* shadcn-like primitives */
+    .tabs{ display:flex; gap:8px; background:hsl(var(--muted)); padding:6px; border-radius:calc(var(--radius) - 4px) }
+    .tab-btn{ flex:1; height:40px; border-radius:10px; border:1px solid transparent; background:transparent; cursor:pointer; font-weight:700; color:hsl(var(--foreground)/.7) }
+    .tab-btn[aria-selected="true"]{ background:linear-gradient(90deg, hsla(var(--secondary)/.2), hsla(var(--primary)/.2)); color:hsl(var(--foreground)); box-shadow:0 6px 20px hsla(var(--primary)/.2); }
+
+    .row{ display:grid; gap:10px; grid-template-columns:1fr 1fr }
+    .row-1{ display:grid; gap:10px; grid-template-columns:1fr }
+    .grid-2{ display:grid; gap:10px; grid-template-columns:1fr 1fr }
+    @media (max-width: 560px){ .grid-2, .row{ grid-template-columns:1fr } }
+
+    label{ font-size:12px; color:hsl(var(--foreground)/.7) }
+    .input{ width:100%; height:44px; padding:0 12px; border-radius:var(--radius); border:1px solid hsl(var(--border)); background:hsla(0 0% 100%/.65); outline:none; color:hsl(var(--foreground)); transition: box-shadow .2s, border-color .2s }
+    .input:focus{ border-color:hsl(var(--primary)); box-shadow:0 0 0 4px hsla(var(--primary)/.25) }
+
+    .btn{ height:44px; padding:0 14px; border-radius:var(--radius); border:1px solid hsl(var(--border)); cursor:pointer; font-weight:800; letter-spacing:.2px; transition: transform .05s ease, box-shadow .15s ease, background .2s ease, color .2s ease }
+    .btn:active{ transform:translateY(1px) }
+    .btn-primary{ color:#fff; background:linear-gradient(90deg, hsl(var(--primary)), hsl(22 90% 60%)); border-color:transparent; box-shadow:0 10px 30px hsla(var(--primary)/.35) }
+    .btn-primary:hover{ box-shadow:0 12px 36px hsla(var(--primary)/.45) }
+    .btn-secondary{ color:#083b3b; background:linear-gradient(90deg, hsl(var(--secondary) / .95), hsl(182 44% 56%)); border-color:transparent; box-shadow:0 10px 28px hsla(var(--secondary)/.35) }
+    .btn-ghost{ background:transparent }
+    .btn-outline{ background:transparent; color:hsl(var(--foreground)); border-color:hsl(var(--border)); }
+
+    .oauth{ display:grid; gap:10px; grid-template-columns:1fr 1fr }
+    @media (max-width: 520px){ .oauth{ grid-template-columns:1fr } }
+
+    .disclaimer{ text-align:center; color:hsl(var(--foreground)/.65); font-size:12px; margin-top:10px }
+
+    /* Animations */
+    @keyframes fade-in{ from{ opacity:0 } to{ opacity:1 } }
+    @keyframes slide-up{ from{ transform:translateY(8px); opacity:0 } to{ transform:none; opacity:1 } }
+    @keyframes scale-in{ from{ transform:scale(.98); opacity:.5 } to{ transform:scale(1); opacity:1 } }
+    .fade-in{ animation:fade-in .5s ease-out both }
+    .slide-up{ animation:slide-up .4s ease-out both }
+    .scale-in{ animation:scale-in .3s ease-out both }
+
+    /* OTP */
+    .otp{ display:flex; justify-content:center; gap:10px; margin:8px 0 12px }
+    .otp input{ width:48px; height:58px; text-align:center; font:800 22px/1 Inter, ui-sans-serif; letter-spacing:.1em; border-radius:var(--radius); border:1px solid hsl(var(--border)); background:hsla(0 0% 100%/.7) }
+    .otp input:focus{ outline:none; border-color:hsl(var(--primary)); box-shadow:0 0 0 4px hsla(var(--primary)/.25) }
+
+    .spacer{ height:8px }
+    /* Hide React root if not populated; show fallback */
+    #root:empty{ display:none }
+  </style>
+  <!-- React + Babel (compile in browser) -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Optional sonner toast (falls back to simple toast if unavailable) -->
+  <script defer src="https://unpkg.com/sonner@1.5.0/dist/sonner.umd.js"></script>
+</head>
+<body>
+  <div class="bg"><div class="pattern"></div></div>
+  <div class="wrap">
+    <div id="root" class="card"></div>
+    <div id="fallback" class="card">
+      <div class="card-body">
+        <div class="left">
+          <div class="fade-in" style="display:grid; gap:12px">
+            <div class="title">Welcome to a Safe Space</div>
+            <div class="subtitle">A gentle place for Aboriginal youth to talk, heal, and feel supported.</div>
+            <div class="tabs" role="tablist" aria-label="Authentication tabs">
+              <button id="fb_tab_pw" class="tab-btn" aria-selected="true">Email / Password</button>
+              <button id=" fb_tab_code\ class=\tab-btn\ aria-selected=\false\>One-Time Code</button>
+            </div>
+            <div id="fb_pw" class="slide-up" style="display:grid; gap:12px">
+              <div style="display:flex; gap:8px; flex-wrap:wrap">
+                <button id="fb_mode_signin" class="btn btn-outline" style="flex:1">Sign In</button>
+                <button id="fb_mode_signup" class="btn btn-outline" style="flex:1">Sign Up</button>
+              </div>
+              <div id="fb_signup_fields" style="display:none" class="row-1">
+                <label for="fb_user">Username</label>
+                <input id="fb_user" class="input" placeholder="your name" />
+              </div>
+              <div class="row-1">
+                <label for="fb_email">Email</label>
+                <input id="fb_email" type="email" class="input" placeholder="you@example.com" />
+              </div>
+              <div class="row-1">
+                <label for="fb_pass">Password</label>
+                <input id="fb_pass" type="password" class="input" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢" />
+              </div>
+              <button id="fb_submit" class="btn btn-primary">Sign In</button>
+              <div class="oauth">
+                <a class="btn btn-outline" href="/auth/google/start">Sign in with Google</a>
+                <a class="btn btn-outline" href="/auth/apple/start">Sign in with Apple</a>
+              </div>
+              <div class="disclaimer">Your privacy and wellbeing matter. All conversations are confidential and secure.</div>
+            </div>
+
+            <div id="fb_code" class="slide-up" style="display:none; gap:12px">
+              <label for="fb_code_email">Email</label>
+              <input id="fb_code_email" type="email" class="input" placeholder="you@example.com" />
+              <button id="fb_send_code" class="btn btn-secondary">Send Code</button>
+              <div id="fb_code_area" class="scale-in" style="display:none">
+                <div style="text-align:center; letter-spacing:.25em; font-weight:800">Enter Code</div>
+                <div class="otp">
+                  <input maxlength="1" inputmode="numeric" pattern="[0-9]*" />
+                  <input maxlength="1" inputmode="numeric" pattern="[0-9]*" />
+                  <input maxlength="1" inputmode="numeric" pattern="[0-9]*" />
+                  <input maxlength="1" inputmode="numeric" pattern="[0-9]*" />
+                  <input maxlength="1" inputmode="numeric" pattern="[0-9]*" />
+                  <input maxlength="1" inputmode="numeric" pattern="[0-9]*" />
+                </div>
+                <button id="fb_verify_code" class="btn btn-outline">Verify Code</button>
+              </div>
+              <div class="disclaimer">Your privacy and wellbeing matter. All conversations are confidential and secure.</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Fallback logic when React/CDNs are unavailable
+    (function(){
+      const ORIGIN = (window.location && window.location.origin && window.location.origin.startsWith('http'))
+        ? window.location.origin
+        : (localStorage.getItem('mh_origin') || 'http://127.0.0.1:8000');
+      const EP = {
+        signupReq: ORIGIN + '/auth/signup/request',
+        signupVer: ORIGIN + '/auth/signup/verify',
+        loginReq: ORIGIN + '/auth/login/request',
+        loginVer: ORIGIN + '/auth/login/verify',
+        loginPw: ORIGIN + '/login',
+        signupPw: ORIGIN + '/signup',
+        chat: ORIGIN + '/chat.html',
+      };
+
+      function qs(id){ return document.getElementById(id); }
+      function otpValue(container){ return Array.from(container.querySelectorAll('input')).map(i=>i.value.trim()).join(''); }
+      function wireOtp(container){
+        const boxes = Array.from(container.querySelectorAll('input'));
+        boxes.forEach((inp,i)=>{
+          inp.addEventListener('input', e=>{ const t=e.target; t.value=t.value.replace(/\D/g,'').slice(-1); if(t.value && i<boxes.length-1) boxes[i+1].focus(); });
+          inp.addEventListener('keydown', e=>{ if(e.key==='Backspace' && !inp.value && i>0) boxes[i-1].focus(); });
+          inp.addEventListener('paste', e=>{ const txt=(e.clipboardData||window.clipboardData).getData('text'); if(/^\d{6}$/.test(txt)){ e.preventDefault(); boxes.forEach((b,j)=> b.value = txt[j]||''); boxes[5].focus(); } });
+        });
+      }
+
+      // Tabs
+      const tabPw = qs('fb_tab_pw'), tabCode = qs('fb_tab_code');
+      const panePw = qs('fb_pw'), paneCode = qs('fb_code');
+      tabPw && tabPw.addEventListener('click', ()=>{ tabPw.setAttribute('aria-selected','true'); tabCode.setAttribute('aria-selected','false'); panePw.style.display='grid'; paneCode.style.display='none'; });
+      tabCode && tabCode.addEventListener('click', ()=>{ tabPw.setAttribute('aria-selected','false'); tabCode.setAttribute('aria-selected','true'); panePw.style.display='none'; paneCode.style.display='grid'; });
+
+      // Mode toggle
+      const modeIn = qs('fb_mode_signin'), modeUp = qs('fb_mode_signup');
+      const signupFields = qs('fb_signup_fields');
+      let mode = 'signin';
+      function refreshMode(){ signupFields.style.display = mode==='signup' ? 'block' : 'none'; qs('fb_submit').textContent = mode==='signup' ? 'Create Account' : 'Sign In'; }
+      modeIn && modeIn.addEventListener('click', ()=>{ mode='signin'; refreshMode(); });
+      modeUp && modeUp.addEventListener('click', ()=>{ mode='signup'; refreshMode(); });
+      refreshMode();
+
+      // Actions
+      qs('fb_submit')?.addEventListener('click', async ()=>{
+        const email = qs('fb_email').value.trim();
+        const password = qs('fb_pass').value;
+        if(mode==='signin'){
+          try{
+            const r = await fetch(EP.loginPw,{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email, password })});
+            const d = await r.json(); if(!r.ok) throw new Error(d && d.error ? d.error : ('HTTP '+r.status));
+            localStorage.setItem('mh_token', d.token); localStorage.setItem('mh_user', d.user?.username||d.user?.email||''); location.href=EP.chat;
+          }catch(e){ alert('Sign in failed: '+(e.message||e)); }
+        }else{
+          const username = qs('fb_user').value.trim();
+          if(!(email.includes('@') && username && password && password.length>=6)) return alert('Enter username, valid email and 6+ char password');
+          try{
+            const r = await fetch(EP.signupReq,{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email, username, password })});
+            const d = await r.json(); if(!r.ok) throw new Error(d && d.error ? d.error : ('HTTP '+r.status));
+            // Show OTP sheet using the code tab area for simplicity
+            tabCode.click();
+            qs('fb_code_email').value = email;
+            qs('fb_code_area').style.display='block';
+          }catch(e){ alert('Signup failed: '+(e.message||e)); }
+        }
+      });
+
+      // Code tab
+      const codeArea = qs('fb_code_area'); if(codeArea) wireOtp(codeArea.querySelector('.otp'));
+      qs('fb_send_code')?.addEventListener('click', async ()=>{
+        const email = qs('fb_code_email').value.trim(); if(!email.includes('@')) return alert('Enter a valid email');
+        try{
+          const r = await fetch(EP.loginReq,{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email })});
+          const d = await r.json(); if(!r.ok) throw new Error(d && d.error ? d.error : ('HTTP '+r.status));
+          qs('fb_code_area').style.display='block';
+        }catch(e){ alert('Send code failed: '+(e.message||e)); }
+      });
+      qs('fb_verify_code')?.addEventListener('click', async ()=>{
+        const email = qs('fb_code_email').value.trim(); const code = otpValue(qs('fb_code_area').querySelector('.otp'));
+        if(code.length!==6) return alert('Enter the 6-digit code');
+        try{
+          const r = await fetch(EP.loginVer,{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email, code })});
+          const d = await r.json(); if(!r.ok) throw new Error(d && d.error ? d.error : ('HTTP '+r.status));
+          localStorage.setItem('mh_token', d.token); localStorage.setItem('mh_user', d.user?.username||d.user?.email||''); location.href=EP.chat;
+        }catch(e){ alert('Verify failed: '+(e.message||e)); }
+      });
+    })();
+  </script>
+
+  <script type="text/babel" data-type="module" data-presets="typescript,react">
+    const ORIGIN = (window.location && window.location.origin && window.location.origin.startsWith('http'))
+      ? window.location.origin
+      : (localStorage.getItem('mh_origin') || 'http://127.0.0.1:8000');
+    const ENDPOINTS = {
+      signupReq: `${ORIGIN}/auth/signup/request`,
+      signupVer: `${ORIGIN}/auth/signup/verify`,
+      loginReq: `${ORIGIN}/auth/login/request`,
+      loginVer: `${ORIGIN}/auth/login/verify`,
+      loginPw: `${ORIGIN}/login`,
+      signupPw: `${ORIGIN}/signup`,
+      chat: `${ORIGIN}/chat.html`,
+    } as const;
+
+    type Mode = 'signin' | 'signup';
+    type Tab = 'password' | 'code';
+
+    function toast(msg: string, type: 'success'|'error'|'info'='info'){
+      // If sonner is present, use it; otherwise basic alert-like.
+      const S = (window as any).Sonner;
+      if(S && S.toaster){
+        if(type==='success') S.toaster.success(msg); else if(type==='error') S.toaster.error(msg); else S.toaster.message(msg);
+      } else {
+        console.log(`[${type}]`, msg);
+      }
+    }
+
+    // Field helpers
+    const Label: React.FC<React.PropsWithChildren<{ htmlFor?: string }>> = ({htmlFor, children}) => (
+      <label htmlFor={htmlFor}>{children}</label>
+    );
+    const Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>((props, ref) => (
+      <input {...props} ref={ref} className={['input', props.className].filter(Boolean).join(' ')} />
+    ));
+    Input.displayName = 'Input';
+    const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement> & { variant?: 'primary'|'secondary'|'outline'|'ghost' }>=({variant='primary', className, children, ...rest})=>{
+      const v = variant==='primary'? 'btn-primary' : variant==='secondary'? 'btn-secondary' : variant==='outline'? 'btn-outline' : 'btn-ghost';
+      return <button {...rest} className={['btn', v, className].join(' ')}>{children}</button>
+    }
+
+    function useOtpBoxes(count=6){
+      const refs = React.useRef<HTMLInputElement[]>([]);
+      React.useEffect(()=>{ refs.current = refs.current.slice(0, count); }, [count]);
+      const value = ()=> refs.current.map(r=> r?.value.trim() || '').join('');
+      const set = (code:string)=>{ refs.current.forEach((r,i)=>{ if(r) r.value = code[i] || ''; }); };
+      const Boxes = () => (
+        <div className="otp">
+          {Array.from({length:count}).map((_,i)=> (
+            <input key={i} ref={el=>{ if(el) refs.current[i]=el }} inputMode="numeric" pattern="[0-9]*" maxLength={1}
+              onInput={e=>{ const t=e.currentTarget; t.value=t.value.replace(/\D/g,'').slice(-1); if(t.value && i<count-1) refs.current[i+1]?.focus(); }}
+              onKeyDown={e=>{ if(e.key==='Backspace' && !(e.currentTarget as HTMLInputElement).value && i>0) refs.current[i-1]?.focus(); }}
+              onPaste={e=>{ const txt=e.clipboardData?.getData('text')||''; if(/^\d{6}$/.test(txt)){ e.preventDefault(); set(txt); refs.current[count-1]?.focus(); } }} />
+          ))}
+        </div>
+      );
+      return { Boxes, value, set };
+    }
+
+    const SocialButtons: React.FC = () => (
+      <div className="oauth">
+        <a className="btn btn-outline" href="/auth/google/start" style={{display:'inline-flex',alignItems:'center',justifyContent:'center',gap:8}}>
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden><path fill="#EA4335" d="M12 11.99v3.6h5.1A6.6 6.6 0 1 1 12 5.4c1.57 0 2.88.54 3.86 1.44l-1.56 1.56A3.88 3.88 0 0 0 12 7.8a4.2 4.2 0 1 0 0 8.4c2.13 0 3.92-1.51 4.27-3.6H12z"/></svg>
+          Sign in with Google
+        </a>
+        <a className="btn btn-outline" href="/auth/apple/start" style={{display:'inline-flex',alignItems:'center',justifyContent:'center',gap:8}}>
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden><path fill="#111" d="M16.365 12.89c-.03-2.37 1.945-3.51 2.035-3.56-1.11-1.62-2.83-1.84-3.43-1.86-1.46-.15-2.86.86-3.6.86-.75 0-1.89-.84-3.13-.82-1.6.02-3.08.93-3.9 2.34-1.67 2.9-.43 7.18 1.2 9.53.8 1.14 1.73 2.42 2.96 2.38 1.2-.05 1.65-.77 3.09-.77 1.43 0 1.85.77 3.11.75 1.28-.02 2.09-1.16 2.88-2.3.9-1.32 1.28-2.6 1.3-2.67-.03-.02-2.5-.96-2.53-3.94zM14.74 5.6c.65-.79 1.09-1.89.97-2.99-.94.04-2.08.63-2.75 1.42-.6.7-1.13 1.83-.99 2.9 1.05.08 2.13-.53 2.77-1.33z"/></svg>
+          Sign in with Apple
+        </a>
+      </div>
+    );
+
+    const PasswordTab: React.FC = () => {
+      const [mode, setMode] = React.useState<Mode>('signin');
+      const emailRef = React.useRef<HTMLInputElement>(null);
+      const userRef = React.useRef<HTMLInputElement>(null);
+      const passRef = React.useRef<HTMLInputElement>(null);
+      const [showOtp, setShowOtp] = React.useState(false);
+      const otp = useOtpBoxes(6);
+
+      async function handleSignIn(){
+        const email = emailRef.current?.value.trim() || '';
+        const password = passRef.current?.value || '';
+        if(!(email.includes('@') && password)) return toast('Enter email and password','error');
+        try{
+          const r = await fetch(ENDPOINTS.loginPw,{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email, password })});
+          const d = await r.json(); if(!r.ok) throw new Error(d?.error||`HTTP ${r.status}`);
+          localStorage.setItem('mh_token', d.token);
+          localStorage.setItem('mh_user', d.user?.username || d.user?.email || '');
+          toast('Welcome back!','success');
+          location.href = ENDPOINTS.chat;
+        }catch(e:any){ toast(String(e.message||e),'error'); }
+      }
+
+      async function handleCreate(){
+        const email = emailRef.current?.value.trim() || '';
+        const username = userRef.current?.value.trim() || '';
+        const password = passRef.current?.value || '';
+        if(!(username && email.includes('@') && password.length>=6)) return toast('Enter username, valid email and 6+ char password','error');
+        try{
+          const r = await fetch(ENDPOINTS.signupReq, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email, username, password })});
+          const d = await r.json(); if(!r.ok) throw new Error(d?.error||`HTTP ${r.status}`);
+          setShowOtp(true); toast(`Code sent to ${email}`,'success');
+        }catch(e:any){ toast(String(e.message||e),'error'); }
+      }
+
+      async function verifyCreate(){
+        const email = emailRef.current?.value.trim() || '';
+        const username = userRef.current?.value.trim() || '';
+        const code = otp.value();
+        if(code.length!==6) return toast('Enter the 6-digit code','error');
+        try{
+          const r = await fetch(ENDPOINTS.signupVer,{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email, username, code })});
+          const d = await r.json(); if(!r.ok) throw new Error(d?.error||`HTTP ${r.status}`);
+          localStorage.setItem('mh_token', d.token);
+          localStorage.setItem('mh_user', d.user?.username || d.user?.email || username);
+          toast('Account created','success');
+          location.href = ENDPOINTS.chat;
+        }catch(e:any){ toast(String(e.message||e),'error'); }
+      }
+
+      return (
+        <div className="slide-up" style={{display:'grid', gap:12}}>
+          <div>
+            <div className="row-1">
+              {mode==='signup' && (
+                <div className="row-1 fade-in">
+                  <Label htmlFor="username">Username</Label>
+                  <Input id="username" placeholder="your name" ref={userRef} />
+                </div>
+              )}
+              <div className="row-1">
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" type="email" placeholder="you@example.com" ref={emailRef} />
+              </div>
+              <div className="row-1">
+                <Label htmlFor="password">Password</Label>
+                <Input id="password" type="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢" ref={passRef} />
+              </div>
+            </div>
+          </div>
+
+          {!showOtp ? (
+            <>
+              <Button variant="primary" onClick={mode==='signin'?handleSignIn:handleCreate}>
+                {mode==='signin'? 'Sign In' : 'Create Account'}
+              </Button>
+              <SocialButtons />
+              <div style={{textAlign:'center'}}>
+                <button className="btn btn-ghost" onClick={()=> setMode(mode==='signin'?'signup':'signin')}>
+                  {mode==='signin'? 'New here? Create an account' : 'Have an account? Sign in'}
+                </button>
+              </div>
+            </>
+          ) : (
+            <div className="scale-in" style={{display:'grid', gap:10}}>
+              <div className="subtitle">We've sent a verification code to {emailRef.current?.value}</div>
+              <div style={{textAlign:'center', letterSpacing:'.25em', fontWeight:800, color:'hsl(var(--foreground))'}}>Enter Code</div>
+              {React.createElement(otp.Boxes)}
+              <div className="grid-2">
+                <Button variant="ghost" onClick={()=> setShowOtp(false)}>Back</Button>
+                <Button variant="primary" onClick={verifyCreate}>Verify & Create Account</Button>
+              </div>
+            </div>
+          )}
+          <div className="disclaimer">Your privacy and wellbeing matter. All conversations are confidential and secure.</div>
+        </div>
+      );
+    };
+
+    const CodeTab: React.FC = () => {
+      const emailRef = React.useRef<HTMLInputElement>(null);
+      const otp = useOtpBoxes(6);
+      const [step, setStep] = React.useState<'request'|'verify'>('request');
+
+      async function request(){
+        const email = emailRef.current?.value.trim() || '';
+        if(!email.includes('@')) return toast('Enter a valid email','error');
+        try{
+          const r = await fetch(ENDPOINTS.loginReq,{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email })});
+          const d = await r.json(); if(!r.ok) throw new Error(d?.error||`HTTP ${r.status}`);
+          setStep('verify'); toast(`Code sent to ${email}`,'success');
+        }catch(e:any){ toast(String(e.message||e),'error'); }
+      }
+      async function verify(){
+        const email = emailRef.current?.value.trim() || '';
+        const code = otp.value();
+        if(code.length!==6) return toast('Enter the 6-digit code','error');
+        try{
+          const r = await fetch(ENDPOINTS.loginVer,{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email, code })});
+          const d = await r.json(); if(!r.ok) throw new Error(d?.error||`HTTP ${r.status}`);
+          localStorage.setItem('mh_token', d.token);
+          localStorage.setItem('mh_user', d.user?.username || d.user?.email || '');
+          toast('Signed in','success');
+          location.href = ENDPOINTS.chat;
+        }catch(e:any){ toast(String(e.message||e),'error'); }
+      }
+
+      return (
+        <div className="slide-up" style={{display:'grid', gap:10}}>
+          <Label htmlFor="code_email">Email</Label>
+          <Input id="code_email" type="email" placeholder="you@example.com" ref={emailRef} />
+          {step==='request' && (
+            <Button variant="secondary" onClick={request}>Send Code</Button>
+          )}
+          {step==='verify' && (
+            <div className="scale-in" style={{display:'grid', gap:10}}>
+              <div style={{textAlign:'center', letterSpacing:'.25em', fontWeight:800}}>Enter Code</div>
+              {React.createElement(otp.Boxes)}
+              <Button variant="outline" onClick={verify}>Verify Code</Button>
+            </div>
+          )}
+          <div className="disclaimer">Your privacy and wellbeing matter. All conversations are confidential and secure.</div>
+        </div>
+      );
+    };
+
+    const App: React.FC = () => {
+      const [tab, setTab] = React.useState<Tab>('password');
+      return (
+        <div className="card-body">
+          <div className="left">
+            <div className="fade-in" style={{display:'grid', gap:12}}>
+              <div className="title">Welcome to a Safe Space</div>
+              <div className="subtitle">A gentle place for Aboriginal youth to talk, heal, and feel supported.</div>
+              <div className="tabs" role="tablist" aria-label="Authentication tabs">
+                <button className="tab-btn" aria-selected={tab==='password'} onClick={()=>setTab('password')}>Email / Password</button>
+                <button className="tab-btn" aria-selected={tab==='code'} onClick={()=>setTab('code')}>One-Time Code</button>
+              </div>
+              <div>
+                {tab==='password' ? <PasswordTab/> : <CodeTab/>}
+              </div>
+            </div>
+          </div>
+          <div className="hero" aria-hidden="true"></div>
+        </div>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('root')!);
+    root.render(<App/>);
+    // Remove fallback if React rendered
+    const fb = document.getElementById('fallback'); if(fb) fb.style.display='none';
+  </script>
+</body>
+</html>
+

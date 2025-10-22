@@ -1,0 +1,58 @@
+{
+  "signup": {
+    "kedharreddy21@gmail.com": {
+      "email": "kedharreddy21@gmail.com",
+      "username": "kedhar21",
+      "code_hash": "0gPJ1_sIGGfubbRJpchuH0MIDBOromOt8zDDzwaMGwg",
+      "ts": 1760590041,
+      "exp": 1760590641
+    },
+    "kjdhfjs@gmail.com": {
+      "email": "kjdhfjs@gmail.com",
+      "username": "lkdfklsd",
+      "code_hash": "HTjvtreA2US2sgQV3p58Atxk6tVi8TXWmne7gIv6PeI",
+      "ts": 1760602087,
+      "exp": 1760602687
+    }
+  },
+  "login": {
+    "jsfjas@gmail.com": {
+      "email": "jsfjas@gmail.com",
+      "code_hash": "rxXYv9cOsg8dibd84YkdkNyEPE7_220X3nHc9C1FPJc",
+      "ts": 1760602249,
+      "exp": 1760602849
+    },
+    "pialnaha713@gmail.com": {
+      "email": "pialnaha713@gmail.com",
+      "code_hash": "r0W8GBzXr3BCMOTXPBEN_4yR5Qbc78yv0FNlpLKb3Z8",
+      "ts": 1760610781,
+      "exp": 1760611081
+    }
+  },
+  "ip": {
+    "127.0.0.1": {
+      "count": 1,
+      "ts": 1760612292
+    },
+    "2405:dc00:ecbd:be00:19d2:17b9:3305:81f0": {
+      "count": 1,
+      "ts": 1760611134
+    },
+    "2405:dc00:ecbd:be00:a957:ae44:7850:d46c": {
+      "count": 1,
+      "ts": 1760658153
+    },
+    "2405:6e00:229:83:9db8:a3eb:86cd:1117": {
+      "count": 3,
+      "ts": 1760610722
+    },
+    "36.255.112.144": {
+      "count": 1,
+      "ts": 1760616575
+    },
+    "138.80.118.173": {
+      "count": 1,
+      "ts": 1760656073
+    }
+  }
+}

@@ -10,7 +10,7 @@ LEGACY_TONE = {
         "Great â€” now, what are the things that keep you strong â€” culture, Country, sport, music, art, being with mob?"
     ),
     "invite_worries": (
-        "Thanks for sharing. When you're ready, we can yarn about the worries that take your strength away. "
+        "Thanks for sharing. When you're ready, we can talk about the worries that take your strength away. "
         "Some people talk about study or work stress, money, relationships, sorry business, health, smoking/alcohol, or sleep. "
         "What's yours today?"
     ),
@@ -194,7 +194,7 @@ def _goal_suggestions(cat: str) -> str:
         "sorry_business": [
             "Spend time with family/Elders today",
             "Keep plans light and rest when you can",
-            "Yarn with an Aboriginal health worker/ACCHO if it helps",
+            "Talk with an Aboriginal health worker/ACCHO if it helps",
         ],
         "health": [
             "Book or confirm a GP appointment",
@@ -237,17 +237,17 @@ def _goal_suggestions(cat: str) -> str:
             "Plan an early night",
         ],
         "racism": [
-            "Yarn with someone who backs you about what happened",
+            "Talk with someone who backs you about what happened",
             "Take space, breathe, and do one thing that helps you feel strong (music, walk, culture)",
             "Write down what you want to say or do next when you're ready",
         ],
         "identity": [
             "Spend a few minutes on Country or in nature if you can",
-            "Reach out to an Elder/family member for a yarn",
+            "Reach out to an Elder or family member to talk",
             "Do a small cultural activity (song, art, language, story)",
         ],
         "": [
-            "Text or yarn with a strong person who supports you",
+            "Text or talk with a strong person who supports you",
             "10â€‘minute walk or gentle stretch",
             "One small task you've been putting off â€” just start it",
         ],

@@ -1,0 +1,66 @@
+{
+  "by_username": {
+    "kedhar21": "3e649734-a34d-4127-a951-16caa155fdad",
+    "kedhar2": "f842102e-718c-4cbc-9364-fae9b226b658",
+    "max12": "8d9795ed-f57b-442b-ada5-7b537ab1310a",
+    "pial": "7ed21600-6ddb-46de-9579-e0ef730afc67",
+    "cat.kutay": "e61c61ac-7014-4856-b22e-da7eec5285c4"
+  },
+  "by_id": {
+    "3e649734-a34d-4127-a951-16caa155fdad": {
+      "id": "3e649734-a34d-4127-a951-16caa155fdad",
+      "username": "kedhar21",
+      "email": "kedharreddy21@gmail.com",
+      "email_verified": true,
+      "password": null,
+      "created_at": 1760580699
+    },
+    "f842102e-718c-4cbc-9364-fae9b226b658": {
+      "id": "f842102e-718c-4cbc-9364-fae9b226b658",
+      "username": "kedhar2",
+      "email": "kedharreddy2@gmail.com",
+      "email_verified": true,
+      "password": {
+        "salt": "oDVzDgmuYy5insh14nVXfg",
+        "hash": "fvyE1W3-OXbR3jfWnShU23XD3UTfFHeUZ5lH2tVV8oc",
+        "algo": "pbkdf2_sha256",
+        "iters": 100000
+      },
+      "created_at": 1760600889
+    },
+    "8d9795ed-f57b-442b-ada5-7b537ab1310a": {
+      "id": "8d9795ed-f57b-442b-ada5-7b537ab1310a",
+      "username": "max12",
+      "email": "maxie2348@gmail.com",
+      "email_verified": true,
+      "password": null,
+      "created_at": 1760611175
+    },
+    "7ed21600-6ddb-46de-9579-e0ef730afc67": {
+      "id": "7ed21600-6ddb-46de-9579-e0ef730afc67",
+      "username": "pial",
+      "email": "pialnaha713@gmail.com",
+      "email_verified": true,
+      "password": {
+        "salt": "a45L6IR_8NAb0Pebi9eCig",
+        "hash": "whHTbFFP14o-wHiLCppW0dRqxw2Fy0qzSjZrQhCiA3U",
+        "algo": "pbkdf2_sha256",
+        "iters": 100000
+      },
+      "created_at": 1760616595
+    },
+    "e61c61ac-7014-4856-b22e-da7eec5285c4": {
+      "id": "e61c61ac-7014-4856-b22e-da7eec5285c4",
+      "username": "cat.kutay",
+      "email": "cat.kutay@cdu.edu.au",
+      "email_verified": true,
+      "password": {
+        "salt": "Vq7zAjP_gZt7587gT9lLCA",
+        "hash": "bqSG_l4F-WWSlxfU2INvJfrdsG-FqpBhpl61UCMh_LI",
+        "algo": "pbkdf2_sha256",
+        "iters": 100000
+      },
+      "created_at": 1760656094
+    }
+  }
+}

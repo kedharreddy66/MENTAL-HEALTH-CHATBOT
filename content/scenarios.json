@@ -1,0 +1,105 @@
+{
+  "scenarios": [
+    {
+      "id": 1,
+      "theme": "Cultural Disconnection",
+      "age_group": "15-18",
+      "setting": "Regional school",
+      "context": "A young person feels disconnected from culture, missing time on country and with Elders.",
+      "problem": "Struggles with concentration, withdrawal, low motivation, and feelings of not belonging.",
+      "challenges": ["Racism at school", "Lack of culturally safe counselling", "Pressure to succeed in exams"],
+      "supports": ["Reconnection to culture", "Spending time with Elders", "Culturally safe school programs"]
+    },
+    {
+      "id": 2,
+      "theme": "Grief and Intergenerational Trauma",
+      "age_group": "16-20",
+      "setting": "Remote community",
+      "context": "Experiencing grief from recent loss while also learning about family trauma from past child removals.",
+      "problem": "Nightmares, anger outbursts, substance use, feelings of hopelessness.",
+      "challenges": ["Limited services", "Stigma about mental health", "Mistrust in mainstream services"],
+      "supports": ["Aboriginal health workers", "Cultural healing practices", "Community grief support groups"]
+    },
+    {
+      "id": 3,
+      "theme": "Peer Pressure and Substance Use",
+      "age_group": "13-16",
+      "setting": "Urban environment",
+      "context": "Peer group pressures the youth to drink or use drugs to fit in.",
+      "problem": "Starts skipping school, feels anxious and guilty, risk of risky behaviour.",
+      "challenges": ["Peer pressure", "Low self-esteem", "Family financial stress"],
+      "supports": ["Mentoring programs", "Cultural youth clubs", "Sports or creative outlets"]
+    },
+    {
+      "id": 4,
+      "theme": "Access Barriers",
+      "age_group": "18-22",
+      "setting": "Remote community",
+      "context": "Struggles with depression and wants help but lives far from clinics.",
+      "problem": "Feels isolated, unsure if telehealth is culturally safe, reluctant to share suicidal thoughts.",
+      "challenges": ["Poor internet connectivity", "Long travel distances", "Shame and stigma"],
+      "supports": ["Mobile outreach services", "Culturally trained telehealth workers", "Community-based healing groups"]
+    },
+    {
+      "id": 5,
+      "theme": "Bullying and Racism",
+      "age_group": "12-15",
+      "setting": "High school",
+      "context": "Experiences bullying at school for being Aboriginal.",
+      "problem": "Feels excluded, develops anxiety about going to school.",
+      "challenges": ["School staff not addressing racism", "Fear of speaking up", "Loss of confidence"],
+      "supports": ["Anti-racism school programs", "Peer allies", "Safe cultural spaces at school"]
+    },
+    {
+      "id": 6,
+      "theme": "Family Conflict",
+      "age_group": "15-19",
+      "setting": "Household",
+      "context": "Family stress due to unemployment, financial issues, or alcohol use.",
+      "problem": "Youth feels unsafe, anxious, and torn between supporting family and focusing on self.",
+      "challenges": ["Unstable home environment", "Lack of privacy", "Intergenerational conflict"],
+      "supports": ["Safe housing programs", "Youth counselling", "Community mentors"]
+    },
+    {
+      "id": 7,
+      "theme": "Self-Identity and Belonging",
+      "age_group": "14-18",
+      "setting": "Mixed cultural community",
+      "context": "Youth struggles with dual identity, feeling disconnected from both Aboriginal and non-Aboriginal peers.",
+      "problem": "Feels confused about identity, low confidence, social withdrawal.",
+      "challenges": ["Lack of role models", "Conflicting expectations from peers", "Isolation"],
+      "supports": ["Cultural camps", "Identity workshops", "Mentorship from community leaders"]
+    },
+    {
+      "id": 8,
+      "theme": "Suicidal Thoughts",
+      "age_group": "16-22",
+      "setting": "Remote or urban",
+      "context": "Youth feels hopeless about the future, with frequent suicidal thoughts.",
+      "problem": "Thinking 'whats the point', feeling like a burden.",
+      "challenges": ["Stigma around suicide", "Fear of being judged", "Limited crisis services"],
+      "supports": ["Crisis helplines", "Aboriginal-led suicide prevention programs", "Strong peer and family support"]
+    },
+    {
+      "id": 9,
+      "theme": "Isolation and Loneliness",
+      "age_group": "13-17",
+      "setting": "Boarding school / away from community",
+      "context": "Youth lives away from family for education, misses community and cultural practices.",
+      "problem": "Feels homesick, lonely, struggles with studies.",
+      "challenges": ["Lack of cultural connection", "Bullying in boarding school", "Pressure to succeed academically"],
+      "supports": ["Regular connection with family via calls", "Cultural mentors at school", "Peer support networks"]
+    },
+    {
+      "id": 10,
+      "theme": "Strength and Resilience",
+      "age_group": "15-20",
+      "setting": "Community-led program",
+      "context": "Youth takes part in cultural, sporting, or music programs.",
+      "problem": "Initially struggled with anxiety and depression but finds strength through culture.",
+      "challenges": ["Keeping consistent engagement", "Balancing school/work and activities"],
+      "supports": ["Cultural strengths-based programs", "Community Elders", "Celebrating achievements"]
+    }
+  ]
+}
+
