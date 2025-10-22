@@ -210,6 +210,21 @@ Notes
 
 ---
 
+## Environment (.env)
+
+- Copy `.env.example` to `.env` and fill only on your machine. Do NOT commit `.env` or any secrets.
+- LLM options
+  - `GEMINI_API_KEY` – enable Google Gemini responses (optional)
+  - `GEMINI_MODEL` – e.g., `gemini-2.5-flash` (optional)
+  - `MODEL_PROVIDER` – set to `gemini` to force Gemini; otherwise auto-selects
+  - `OLLAMA_HOST`, `OLLAMA_PORT`, `OLLAMA_MODEL` – configure local Ollama
+- Email/OTP (optional, for production email codes)
+  - `SMTP_HOST`, `SMTP_PORT` (587), `SMTP_USER`, `SMTP_PASS`, `SMTP_FROM`
+  - Dev helpers: `DEV_OTP_DEBUG=1`, `DEBUG_OTP=1` write OTPs to `data/outbox/*.txt`
+- Keep API keys and passwords out of GitHub. Rotate any previously exposed credentials.
+
+---
+
 ## Quick Start (Installation)
 
 Windows (PowerShell)
