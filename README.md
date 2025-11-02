@@ -22,19 +22,6 @@ Notes
 - No database required. The browser carries conversation state.
 - Retrieval (optional): run `python scripts/build_index.py` to build a local index for RAG context. The chatbot still works without it.
 
-Demo Video Guide
-----------------
-
-Record a short walkthrough for supervisors/reviewers:
-- Terminal: start the API with `uvicorn src.mh_core.api:app --reload`.
-- Browser: visit `http://127.0.0.1:8000/`, ask a couple of questions.
-- Click “Reset” to show a fresh conversation (no login).
-- Optional: if using Ollama, briefly show `ollama list`; if using Gemini, mention `GEMINI_API_KEY`.
-
-Windows recording tips
-- Press `Win + G` (Xbox Game Bar) to record the screen, or
-- Use OBS Studio for more control (free and popular).
-
 Repository Structure
 --------------------
 
