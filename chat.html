@@ -61,9 +61,6 @@
       <div class="header-actions">
         <button id="provider" class="btn btn-ghost" title="Switch AI model">  Model: Ollama</button>
         <button id="reset" class="btn btn-ghost" title="Start a new chat">Reset</button>
-        <span id="authStatus" class="badge" style="display:none"></span>
-        <button id="authBtn" class="btn btn-ghost" title="Log in or sign up">Login</button>
-        <button id="logoutBtn" class="btn btn-ghost" style="display:none" title="Log out">Logout</button>
       </div>
     </div>
 
@@ -77,31 +74,12 @@
   </div>
 
   <script>
-    let TOKEN = localStorage.getItem('mh_token') || '';
-    let USERNAME = localStorage.getItem('mh_user') || '';
-
-    (function() {
-      const authBtn = document.getElementById('authBtn');
-      const authStatus = document.getElementById('authStatus');
-      const logoutBtn = document.getElementById('logoutBtn');
-      if (TOKEN) {
-        authStatus.textContent = `@${USERNAME}`;
-        authStatus.style.display = 'inline-flex';
-        authBtn.style.display = 'none';
-        logoutBtn.style.display = 'inline-block';
-      } else {
-        authBtn.style.display = 'inline-block';
-        logoutBtn.style.display = 'none';
-      }
-      authBtn.addEventListener('click', () => { window.location.href = '/auth.html'; });
-      logoutBtn.addEventListener('click', () => { setLoggedOut(); window.location.reload(); });
-    })();
+    // No authentication: simplify state and UI
 
     const ORIGIN = (window.location && window.location.origin && window.location.origin.startsWith('http'))
       ? window.location.origin : (localStorage.getItem('mh_origin') || 'http://127.0.0.1:8000');
     const API_URL = `${ORIGIN}/chat`;
     const RESET_URL = `${ORIGIN}/reset`;
-    const STATE_URL = `${ORIGIN}/state`;
 
     let PROVIDER = localStorage.getItem('mh_provider') || 'ollama';
     let STATE = {};
@@ -112,7 +90,7 @@
     const inputEl = document.getElementById('input');
     const sendBtn = document.getElementById('send');
 
-    function authHeaders(){ return TOKEN ? { 'Authorization': 'Bearer ' + TOKEN } : {}; }
+    // No auth headers required
 
     // Connectivity signal
     const signalEl = document.getElementById('signal');
@@ -140,7 +118,7 @@
       sendBtn.disabled = true; inputEl.disabled = true; resetBtn.disabled = true;
       const typingRow = showTyping(); const started = performance.now();
       try{
-        const resp = await fetch(API_URL, { method:'POST', headers:Object.assign({ 'Content-Type':'application/json' }, authHeaders()), body: JSON.stringify({ message: text, state: STATE, provider: PROVIDER })});
+        const resp = await fetch(API_URL, { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify({ message: text, state: STATE, provider: PROVIDER })});
         if(!resp.ok) throw new Error(`HTTP ${resp.status}`);
         const data = await resp.json(); if (data && data.state) STATE = data.state;
         const elapsed = performance.now() - started; if (elapsed < 120) await new Promise(r => setTimeout(r, 120 - elapsed));
@@ -154,7 +132,7 @@
     async function resetChat(){
       try{
         resetBtn.disabled = true; sendBtn.disabled = true; inputEl.disabled = true;
-        const resp = await fetch(RESET_URL, { method:'POST', headers: authHeaders() }); if(!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const resp = await fetch(RESET_URL, { method:'POST' }); if(!resp.ok) throw new Error(`HTTP ${resp.status}`);
         const data = await resp.json(); STATE = (data && data.state) ? data.state : {};
         messagesEl.innerHTML = ''; inputEl.value = ''; inputEl.style.height = '44px';
       }catch(err){ console.error('Reset error:', err); addMessage('bot', 'Could not reset. Is the /reset endpoint running?'); }
@@ -169,13 +147,11 @@
     providerBtn.addEventListener('click', ()=>{ PROVIDER = (PROVIDER === 'ollama') ? 'gemini' : 'ollama'; localStorage.setItem('mh_provider', PROVIDER); updateProviderLabel(); });
     updateProviderLabel();
     (async ()=>{ try{ if(!localStorage.getItem('mh_provider')){ const r = await fetch(`${ORIGIN}/debug/providers`, { method:'GET', cache:'no-store' }); if(r.ok){ const d = await r.json(); if(d && d.gemini && d.gemini.available){ PROVIDER = 'gemini'; localStorage.setItem('mh_provider', PROVIDER); updateProviderLabel(); } } } }catch(_){ } })();
-    (async ()=>{ if(TOKEN){ try{ const r = await fetch(STATE_URL, { headers: authHeaders() }); if(r.ok){ const d = await r.json(); if(d && d.state) STATE = d.state; } }catch(_){ } } })();
 
     const autoGrow = () => { inputEl.style.height='auto'; inputEl.style.height = Math.min(inputEl.scrollHeight, 160)+'px'; };
     inputEl.addEventListener('input', autoGrow); autoGrow();
 
-    function setLoggedIn(user, token){ const authStatus = document.getElementById('authStatus'); const logoutBtn = document.getElementById('logoutBtn'); if(user && token){ USERNAME = user.username || user.usr || ''; TOKEN = token; localStorage.setItem('mh_token', token); localStorage.setItem('mh_user', USERNAME); if (authStatus) { authStatus.style.display = 'inline-flex'; authStatus.textContent = `@${USERNAME}`; } if (logoutBtn) { logoutBtn.style.display = ''; } } }
-    function setLoggedOut(){ const authStatus = document.getElementById('authStatus'); const logoutBtn = document.getElementById('logoutBtn'); TOKEN = ''; USERNAME = ''; localStorage.removeItem('mh_token'); localStorage.removeItem('mh_user'); if (authStatus) { authStatus.style.display = 'none'; authStatus.textContent = ''; } if (logoutBtn) { logoutBtn.style.display = 'none'; } }
+    // Removed login/logout helpers; not needed without auth
   </script>
 </body>
 </html>

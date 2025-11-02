@@ -42,50 +42,5 @@ class ChatOut(BaseModel):
     messages: Optional[List[str]] = None
 
 
-class SignupIn(BaseModel):
-    email: Optional[str] = None
-    username: str
-    password: Optional[str] = None  # optional if using OTP-only
-
-
-class LoginIn(BaseModel):
-    username: Optional[str] = None
-    email: Optional[str] = None
-    password: Optional[str] = None  # optional if using OTP-only
-
-
-class TokenOut(BaseModel):
-    token: str
-    user: dict
-
-
-class UserOut(BaseModel):
-    id: str
-    username: str
-    email: Optional[str] = None
-
-
-# OTP flows
-class SignupRequestIn(BaseModel):
-    email: str
-    username: str
-
-
-class SignupVerifyIn(BaseModel):
-    email: str
-    username: str
-    code: str
-    password: Optional[str] = None
-
-
-class LoginRequestIn(BaseModel):
-    email: str
-
-
-class LoginVerifyIn(BaseModel):
-    email: str
-    code: str
-
-
-# Profile updates
+# Auth-related models removed (no authentication)
  
